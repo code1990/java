@@ -102,4 +102,20 @@ public class CollectionTest {
         }
     }
 
+    @Test
+    public void testInfo(){
+        int[] array = new int[200];
+        for (int i = 0; i <150 ; i++) {
+            int random = new Random().nextInt(100);
+            array[i]=random;
+        }
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array));
+        Set<Integer> set = new HashSet<Integer>();
+        for (int x:array) {
+            set.add(x);
+        }
+        System.out.println(Arrays.toString(set.toArray()));
+    }
+
 }
