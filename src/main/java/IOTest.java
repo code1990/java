@@ -1,10 +1,12 @@
 import org.junit.Test;
 
 import java.io.*;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
-import java.util.zip.ZipInputStream;
-import java.util.zip.ZipOutputStream;
+import java.util.Enumeration;
+
+import org.apache.tools.zip.ZipEntry;
+import org.apache.tools.zip.ZipFile;
+import org.apache.tools.zip.ZipOutputStream;
+
 
 /**
  * @author issuser
@@ -41,20 +43,22 @@ public class IOTest {
     /*3.获取文件的详细信息*/
     @Test
     public void testGetFileInfo() {
-        System.out.println(new File("C:\\Windows\\System32\\drivers\\etc\\hosts"));//构造方法1
-        System.out.println(new File("C:\\Windows\\System32\\drivers\\etc\\", "hosts"));//构造方法2
-        System.out.println(new File(new File("C:\\Windows\\System32\\drivers\\etc\\"), "hosts"));//构造方法3
-        System.out.println(new File("C:\\Windows\\System32\\drivers\\etc\\hosts").getName());//获取文件的名称
-        System.out.println(new File("C:\\Windows\\System32\\drivers\\etc\\hosts").canRead()); //判断文件是否为可读的
-        System.out.println(new File("C:\\Windows\\System32\\drivers\\etc\\hosts").canWrite());//判断文件是否可被写入
-        System.out.println(new File("C:\\Windows\\System32\\drivers\\etc\\hosts").exists());//判断文件是否存在
-        System.out.println(new File("C:\\Windows\\System32\\drivers\\etc\\hosts").length()); //获取文件的长度(以字节为单位);//
-        System.out.println(new File("C:\\Windows\\System32\\drivers\\etc\\hosts").getAbsolutePath());//获取文件的绝对路径
-        System.out.println(new File("C:\\Windows\\System32\\drivers\\etc\\hosts").getParent());//获取文件的父路径
-        System.out.println(new File("C:\\Windows\\System32\\drivers\\etc\\hosts").isFile()); //判断文件是否存在
-        System.out.println(new File("C:\\Windows\\System32\\drivers\\etc\\hosts").isDirectory()); //判断文件是否为一个目录
-        System.out.println(new File("C:\\Windows\\System32\\drivers\\etc\\hosts").isHidden()); //判断文件是否为隐藏文件
-        System.out.println(new File("C:\\Windows\\System32\\drivers\\etc\\hosts").lastModified());//获取文件最后修改时间
+        String path = "C:\\Windows\\System32\\drivers\\etc\\hosts";
+        String path2 = "C:\\Windows\\System32\\drivers\\etc\\";
+        System.out.println(new File(path));//构造方法1
+        System.out.println(new File(path2, "hosts"));//构造方法2
+        System.out.println(new File(new File(path2), "hosts"));//构造方法3
+        System.out.println(new File(path).getName());//获取文件的名称
+        System.out.println(new File(path).canRead()); //判断文件是否为可读的
+        System.out.println(new File(path).canWrite());//判断文件是否可被写入
+        System.out.println(new File(path).exists());//判断文件是否存在
+        System.out.println(new File(path).length()); //获取文件的长度(以字节为单位);//
+        System.out.println(new File(path).getAbsolutePath());//获取文件的绝对路径
+        System.out.println(new File(path).getParent());//获取文件的父路径
+        System.out.println(new File(path).isFile()); //判断文件是否存在
+        System.out.println(new File(path).isDirectory()); //判断文件是否为一个目录
+        System.out.println(new File(path).isHidden()); //判断文件是否为隐藏文件
+        System.out.println(new File(path).lastModified());//获取文件最后修改时间
 
     }
 
@@ -136,12 +140,115 @@ public class IOTest {
         file.delete();
     }
 
-    /*文件压缩 不支持中文文件目录的问题*/
+    /*文件压缩  原生不支持中文文件目录*/
     @Test
-    public void testUnZip() throws Exception {
-
-
+    public void testZipFile() throws Exception {
+        unZip("cronCreator.zip");
+        zip("cronCreator.zip");
     }
 
-    /*文件解压*/
+
+    //解压指定zip文件
+    public static void unZip(String str) {//unZipfileName需要解压的zip文件名
+        FileOutputStream fos;
+        File file;
+        InputStream inputStream;
+
+        try {
+            ZipFile zipFile = new ZipFile(new File(str), "GBK");
+
+            for (Enumeration entries = zipFile.getEntries(); entries.hasMoreElements(); ) {
+                ZipEntry entry = (ZipEntry) entries.nextElement();
+
+                String tmp = str.substring(0, str.lastIndexOf("."));
+                if (!new File(tmp).exists()) {
+                    new File(tmp).mkdirs();
+                }
+                file = new File(tmp + File.separator + entry.getName());
+                if (entry.isDirectory()) {
+                    file.mkdirs();
+                } else {
+                    //如果指定文件的目录不存在,则创建之.
+
+                    File parent = new File(file.getParent());
+                    if (!parent.exists()) {
+                        parent.mkdirs();
+                    }
+
+                    inputStream = zipFile.getInputStream(entry);
+
+                    fos = new FileOutputStream(file);
+                    int readedBytes;
+                    byte[] buf = new byte[1024 * 1024 * 1024];
+                    while ((readedBytes = inputStream.read(buf)) > 0) {
+                        fos.write(buf, 0, readedBytes);
+                    }
+                    fos.close();
+
+                    inputStream.close();
+                }
+            }
+            zipFile.close();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+
+    public static File zip(String filePath) throws Exception {
+        File target = null;
+        File source = new File(filePath);
+        if (source.exists()) {
+            // 压缩文件名=源文件名.zip
+            String zipName = source.getName() + ".zip";
+            target = new File(source.getParent(), zipName);
+            if (target.exists()) {
+                target.delete(); // 删除旧的文件
+            }
+            FileOutputStream fos = null;
+            ZipOutputStream zos = null;
+            try {
+                fos = new FileOutputStream(target);
+                zos = new ZipOutputStream(new BufferedOutputStream(fos));
+                // 添加对应的文件Entry
+                addEntry("/", source, zos);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } finally {
+                zos.closeEntry();
+                zos.close();
+                fos.close();
+
+            }
+        }
+        return target;
+    }
+
+    private static void addEntry(String base, File source, ZipOutputStream zos)
+            throws IOException {
+        // 按目录分级，形如：/aaa/bbb.txt
+        String entry = base + source.getName();
+        if (source.isDirectory()) {
+            for (File file : source.listFiles()) {
+                // 递归列出目录下的所有文件，添加文件Entry
+                addEntry(entry + "/", file, zos);
+            }
+        } else {
+            FileInputStream fis = null;
+            BufferedInputStream bis = null;
+            try {
+                byte[] buffer = new byte[1024 * 10];
+                fis = new FileInputStream(source);
+                bis = new BufferedInputStream(fis, buffer.length);
+                int read = 0;
+                zos.putNextEntry(new ZipEntry(entry));
+                while ((read = bis.read(buffer, 0, buffer.length)) != -1) {
+                    zos.write(buffer, 0, read);
+                }
+                zos.closeEntry();
+            } finally {
+                bis.close();
+                fis.close();
+            }
+        }
+    }
 }

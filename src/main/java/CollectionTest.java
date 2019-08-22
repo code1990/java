@@ -42,7 +42,7 @@ public class CollectionTest {
     @Test
     public void testList(){
         /*最为常用*/
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         list.add("a");
         list.add("b");
         list.add("c");
@@ -63,7 +63,7 @@ public class CollectionTest {
     * */
     @Test
     public void testSet(){
-        TreeSet<String> treeSet = new TreeSet<>();
+        TreeSet<String> treeSet = new TreeSet<String>();
         for (int i = 0; i <5 ; i++) {
             treeSet.add(i+"");
         }
@@ -80,7 +80,7 @@ public class CollectionTest {
     * */
     @Test
     public void testMap(){
-        Map<Integer,String> map= new HashMap<>();
+        Map<Integer,String> map= new HashMap<Integer,String>();
         map.put(1,"1");
         map.put(2,"2");
         map.put(3,"3");
