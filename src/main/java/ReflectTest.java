@@ -1,5 +1,9 @@
 import org.junit.Test;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.Arrays;
 
 /**
@@ -19,7 +23,7 @@ public class ReflectTest {
     }
 
     @Test
-    public void getFields() throws Exception {
+    public void getClassInfo() throws Exception {
         System.out.println(clazz.getPackage());//类路径类
         System.out.println(clazz.getName());//类名称继承类
         System.out.println(clazz.getSuperclass());//集成类接口
@@ -48,8 +52,52 @@ public class ReflectTest {
         System.out.println(clazz.getDeclaringClass());//
     }
 
+    /*构造器常用的方法*/
     @Test
-    public void getMethods() {
+    public void testConstructor() throws Exception {
 
+        Constructor constructor = clazz.getDeclaredConstructor(new Class[]{String.class});
+        /*可变数量的参数*/
+        System.out.println(constructor.isVarArgs());
+        /*获取参数类型*/
+        System.out.println(Arrays.toString(constructor.getParameterTypes()));
+        /*获取异常类型*/
+        System.out.println(Arrays.toString(constructor.getExceptionTypes()));
+        /*新建一个实例*/
+//        constructor.newInstance(String.class);
+        /*设置可见*/
+        constructor.setAccessible(true);
+        /*获取构造方法采用的修饰符的整数*/
+        int modifier = constructor.getModifiers();
+        /**/
+        System.out.println(Modifier.isPublic(modifier));
+        System.out.println(Modifier.isPrivate(modifier));
+        System.out.println(Modifier.isProtected(modifier));
+        System.out.println(Modifier.isStatic(modifier));
+        System.out.println(Modifier.isFinal(modifier));
+        System.out.println(Modifier.isAbstract(modifier));
+        System.out.println(Modifier.toString(modifier));
+    }
+
+    @Test
+    public void testField() throws Exception {
+        Field field = clazz.getField("publicString");
+        System.out.println(field.getName());
+        System.out.println(field.getType());
+        field.setAccessible(true);
+        System.out.println(field.getModifiers());
+    }
+
+    @Test
+    public void getMethod() throws Exception {
+        Method method = clazz.getMethod("setString", String.class);
+        System.out.println(method.getName());
+        System.out.println(method.getParameterTypes());
+        System.out.println(method.getReturnType());
+        System.out.println(method.getExceptionTypes());
+        System.out.println(method.isVarArgs());
+        System.out.println(method.getModifiers());
+        /*调用回调方法设置参数*/
+        method.invoke(new ReflectEntityTest(),"1");
     }
 }
