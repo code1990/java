@@ -25,7 +25,10 @@ public class JDBCTest {
     public static void main(String[] args) throws SQLException {
         Connection connection = getConnection();
         Statement statement = connection.createStatement();
-
+        /*更新executeUpdate 查询executeQuery
+        * 添加批处理 addBatch
+        * 执行批处理executeBath
+        * */
         ResultSet rs = statement.executeQuery("select * from t_test");
         while (rs.next()) {
             String id = rs.getString("id");

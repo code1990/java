@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fde06a2-0444-4a42-8482-783c5848fbfd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/StreamEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnnotationClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnnotationClassTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CollectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CollectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JDBCTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JDBCTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,24 +23,25 @@
           <entry key="project.closed" value="5" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8034" />
+          <entry key="JAVA" value="9628" />
           <entry key="PLAIN_TEXT" value="54" />
           <entry key="XML" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="30" />
+          <entry key="JAVA" value="39" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="2" />
         </counts>
@@ -45,31 +50,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/AnnotationClassTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#334#335#0" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
-                <element signature="e#388#389#0" expanded="true" />
-                <element signature="e#413#414#0" expanded="true" />
-                <element signature="e#446#447#0" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/AnnotationTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CollectionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="183">
+              <caret line="221" column="16" lean-forward="true" selection-start-line="221" selection-start-column="16" selection-end-line="221" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1080#1088#0" expanded="true" />
+                <element signature="e#2153#2170#0" expanded="true" />
+                <element signature="e#2116#2132#0" expanded="true" />
+                <element signature="e#2906#2914#0" expanded="true" />
+                <element signature="e#3241#3249#0" expanded="true" />
+                <element signature="e#3717#3725#0" expanded="true" />
+                <element signature="e#4178#4186#0" expanded="true" />
+                <element signature="e#4724#4732#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,9 +97,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/ArrayTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ExceptionTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CollectionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/IOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/JDBCTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/EnumTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/TypeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/InternetTest.java" />
@@ -119,6 +112,10 @@
         <option value="$PROJECT_DIR$/src/main/java/FieldMethodParamterAnnotaion.java" />
         <option value="$PROJECT_DIR$/src/main/java/AnnotationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/A.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AnnotationClassTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JDBCTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/StreamEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CollectionTest.java" />
       </list>
     </option>
   </component>
@@ -146,8 +143,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="545" />
-    <option name="y" value="85" />
+    <option name="x" value="402" />
+    <option name="y" value="103" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -157,6 +154,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,16 +162,33 @@
               <item name="java" type="b2602c69:ProjectViewProjectNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566572052604" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566617517125" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2888889" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
@@ -196,7 +211,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AnnotationTest.getField">
+  <component name="RunManager" selected="JUnit.CollectionTest.testMapReduce">
     <configuration name="AnnotationClassTest.getField" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java" />
       <option name="PACKAGE_NAME" value="" />
@@ -227,11 +242,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReflectTest.getFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CollectionTest.testMapReduce" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ReflectTest" />
-      <option name="METHOD_NAME" value="getFields" />
+      <option name="MAIN_CLASS_NAME" value="CollectionTest" />
+      <option name="METHOD_NAME" value="testMapReduce" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -247,30 +262,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadTest.testInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ThreadTest" />
-      <option name="METHOD_NAME" value="testInfo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.ThreadTest.testInfo" />
-      <item itemvalue="JUnit.ReflectTest.getFields" />
+      <item itemvalue="JUnit.AnnotationClassTest.getField" />
       <item itemvalue="JUnit.ReflectTest.testConstructor" />
       <item itemvalue="JUnit.AnnotationTest.getField" />
       <item itemvalue="JUnit.AnnotationTest.getConstructor" />
+      <item itemvalue="JUnit.CollectionTest.testMapReduce" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CollectionTest.testMapReduce" />
         <item itemvalue="JUnit.AnnotationTest.getField" />
         <item itemvalue="JUnit.AnnotationTest.getConstructor" />
         <item itemvalue="JUnit.AnnotationClassTest.getField" />
         <item itemvalue="JUnit.ReflectTest.testConstructor" />
-        <item itemvalue="JUnit.ReflectTest.getFields" />
       </list>
     </recent_temporary>
   </component>
@@ -338,12 +343,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ReflectTest_getFields - 2019.08.23 at 21h 29m 56s.xml">
-      <configuration name="ReflectTest.getFields" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ReflectTest_getFields - 2019.08.23 at 21h 30m 23s.xml">
-      <configuration name="ReflectTest.getFields" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ReflectTest_getFields - 2019.08.23 at 21h 30m 39s.xml">
       <configuration name="ReflectTest.getFields" configurationId="JUnit" />
     </history-entry>
@@ -368,12 +367,18 @@
     <history-entry file="AnnotationTest_getField - 2019.08.23 at 22h 46m 25s.xml">
       <configuration name="AnnotationTest.getField" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CollectionTest_testMapReduce - 2019.08.24 at 11h 25m 30s.xml">
+      <configuration name="CollectionTest.testMapReduce" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CollectionTest_testMapReduce - 2019.08.24 at 11h 28m 20s.xml">
+      <configuration name="CollectionTest.testMapReduce" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="497" y="214" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2677761" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -382,7 +387,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.24386252" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.23404256" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.23404256" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -449,20 +454,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ArrayTest.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FlowControlTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HelloWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JavaBaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -509,13 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/InternetServerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -556,43 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CollectionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1080#1088#0" expanded="true" />
-            <element signature="e#2116#2132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ReflectEntityTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="30" />
-          <folding>
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#480#481#0" expanded="true" />
-            <element signature="e#528#529#0" expanded="true" />
-            <element signature="e#1656#1657#0" expanded="true" />
-            <element signature="e#1692#1693#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ReflectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="100" column="51" selection-start-line="100" selection-start-column="51" selection-end-line="100" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/EnumTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -607,26 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FieldMethodParamterAnnotaion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ConstructorAnnotaion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ReflectUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="566">
@@ -637,28 +564,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AnnotationClassTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ReflectEntityTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="162">
+          <caret line="122" column="36" selection-start-line="4" selection-end-line="131" selection-end-column="1" />
+          <folding>
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ReflectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FlowControlTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FieldMethodParamterAnnotaion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/AnnotationClassTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="33" column="1" selection-start-line="2" selection-end-line="33" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/AnnotationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="270">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StreamEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="e#170#171#0" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ConstructorAnnotaion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CollectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="221" column="16" lean-forward="true" selection-start-line="221" selection-start-column="16" selection-end-line="221" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1080#1088#0" expanded="true" />
+            <element signature="e#2153#2170#0" expanded="true" />
+            <element signature="e#2116#2132#0" expanded="true" />
+            <element signature="e#2906#2914#0" expanded="true" />
+            <element signature="e#3241#3249#0" expanded="true" />
+            <element signature="e#3717#3725#0" expanded="true" />
+            <element signature="e#4178#4186#0" expanded="true" />
+            <element signature="e#4724#4732#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -672,7 +692,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.2888889" />
               </list>
             </option>
           </splitter-proportions>
@@ -684,7 +704,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.2888889" />
               </list>
             </option>
           </splitter-proportions>
@@ -745,7 +765,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.2888889" />
               </list>
             </option>
           </splitter-proportions>
