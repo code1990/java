@@ -1,6 +1,14 @@
 /**
  * @author issuser
  * @date 2019-08-17 19:14
+ * 继承的限制
+ * 1.Java不允许多重继承 可以多层继承
+ * 2.父类的公用操作直接继承 私有操作间接继承通过set/set方式
+ * 3.默认先调用父类无参数构造方法 保证父类先实例化
+ * Object是所有类的父类 默认提供一个无参数构造方法
+ * static修饰的内容会优先加载
+ *
+ * 引用传递 栈存放的是对象名 堆存放的是具体的内容
  */
 public class Son extends Parent implements drawString {
     public Son(String name, String age) {
@@ -109,7 +117,7 @@ class Parent extends GrandParent {
 }
 
 /*6抽象类和接口 都不能被实例化 区别如下
-* （1）抽象类可以有构造方法，接口中不能有构造方法。
+* （1）抽象类一定有构造方法(目的是为了属性实例化)，接口中不能有构造方法。
 
 （2）抽象类中可以有普通成员变量，接口中没有普通成员变量
 
@@ -129,7 +137,8 @@ abstract class GrandParent {
 
 /*接口不能被实例化  没有构造方法 没有方法的实现 不能定义常量*/
 interface drawString {
+    /*抽象方法和全局常量*/
     public double PI = 3.14;
-
+    /*只能使用public权限*/
     void drawSomething();
 }

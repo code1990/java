@@ -6,7 +6,9 @@ import java.math.BigInteger;
 public class PackageClassTest {
 
     /*为了能将基本类型视为对象进行处理，并能连接相关的方法，
-    Java为每个基本类型都提供了包装类 下面依次介绍这些类型的常见用法*/
+    Java为每个基本类型都提供了包装类 下面依次介绍这些类型的常见用法
+    自动装箱 自动拆箱 以及类型之间的转换 parseXXX
+    */
     @Test
     public void testInteger() {
         /*1.构造方法*/

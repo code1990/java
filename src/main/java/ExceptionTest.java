@@ -11,7 +11,7 @@ public class ExceptionTest {
     * 1.异常是程序运行期间,终止正常的指令流
     * 2.Throwable是所有的异常类父类
     * 3.Exception和Error是异常类的子类
-    * 4.Error是java系统内部错误或者内存泄露
+    * 4.Error是JVM错误
     * 5.Exception是非致命性错误 通过捕获程序可以正常执行
     *
     * Exception主要分为RuntimeException和非RuntimeException 其中编辑器提示报错的叫受检异常
@@ -44,11 +44,24 @@ public class ExceptionTest {
             int i = 0;
             System.out.println(10 / i);
             throw new RuntimeException();
+            /*范围小的先处理 ArithmeticException是Exception的子类 先处理*/
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             System.out.println("finally修饰的代码块一定被执行");
+            System.out.println("finally主要用来释放资源");
         }
+
+    }
+
+    @Test
+    public void testAssert(){
+        /*assert断言 表示对一定预期结果的判定*/
+        int num =10;
+        assert num ==20:"num!=20";
+        System.out.println(num);
 
     }
 }

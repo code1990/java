@@ -18,6 +18,18 @@ public final class ObjectHighTest {
 
     public static void main(String[] args) {
         /*1.package 包 包的主要作用就是为了防止文件名冲突 同一个包下的类相互引入不需要导入包名*/
+        /*import导入是按需加载
+        * java.lang 基本包
+        * java.lang.reflect 反射机制
+        * java.util 工具包
+        * java.text 文本操作
+        * java.sql 数据库
+        * java.net 网络编程
+        * java.io 输入输出流
+        * java.awt 抽象窗口工具集
+        * javax.swing 图形窗口界面
+        * java.applet 小应用程序
+        * */
         Date utilDate = new Date();
         System.out.println(utilDate.getTime());
         java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
@@ -48,5 +60,13 @@ public final class ObjectHighTest {
 class FriendClass {
     void getInfo() {
         System.out.println("一个Java文件只能有一个public的类,这是编译的入口文件.其他与之同名文件下的类,称之为伴生类");
+    }
+}
+/*单例设计模式*/
+class Singleton{
+    private final static Singleton instance = new Singleton();
+    private Singleton(){}
+    public static Singleton getInstance(){
+        return instance;
     }
 }
