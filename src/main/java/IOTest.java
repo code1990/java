@@ -2,6 +2,7 @@ import org.junit.Test;
 
 import java.io.*;
 import java.util.Enumeration;
+import java.util.Scanner;
 
 import org.apache.tools.zip.ZipEntry;
 import org.apache.tools.zip.ZipFile;
@@ -11,11 +12,14 @@ import org.apache.tools.zip.ZipOutputStream;
 /**
  * @author issuser
  * @date 2019-08-20 22:02
+ * 序列化将对象数据转换为二进制流数据进行传输
+ * Serializable接口知识一种标识 表示具有一项能力
  */
-public class IOTest {
+public class IOTest implements Serializable {
     /*1.流失一组有序的数据序列 IO通常与磁盘文件存取有关
 
     字节流以Stream结尾 字符流以reader writer结尾
+    字节流直接与文件进行数据交互 字符流需要通过缓冲区才能与终端文件进行交互
     * */
 
     /*2.文件/文件夹的创建,删除*/
@@ -26,6 +30,8 @@ public class IOTest {
         String dir = "hello";
         File file = new File(path);
         File dirFile = new File(dir);
+        /*路径分隔符*/
+        File files = new File("D:"+File.separator+"test.txt");
         try {
             file.createNewFile();
             dirFile.mkdirs();
@@ -62,7 +68,9 @@ public class IOTest {
 
     }
 
-    /*4.文件输入流 输出流*/
+    /*4.文件输入流 输出流
+    * 资源类的操作,网络操作,数据库操作都不一定可以100%执行完成 所以都会抛出异常 需要用户处理
+    * */
     @Test
     public void testFileInputOutputStream() throws Exception {
         /*创建一个文件往文件写入内容 然后读取文件内容 打印到控制台*/
@@ -140,11 +148,42 @@ public class IOTest {
         file.delete();
     }
 
+    @Test
+    public void testSystem(){
+        /*scanner扫描仪与System类*/
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("请出入数据:"+System.currentTimeMillis());
+        if (scanner.hasNext()){
+            if(scanner.next().equals("0")){
+                System.err.println("输出错误消息");
+            }
+            System.out.println(scanner.next());
+        }
+        scanner.close();
+        System.gc();
+    }
+
+    @Test
+    public void testSerializable() throws Exception{
+        /*序列化和反序列化需要使用ObjectInputStream ObjectOutputStream*/
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File("word.txt")));
+//        oos.writeObject(new StreamEntity(12.56,99));
+        /*被transient修饰符的属性不可以呗序列化 transient即逝的 短暂的*/
+        oos.writeObject(new StreamEntity(12.56,999,"java"));
+        oos.close();
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("word.txt")));
+        Object obj = ois.readObject();
+        StreamEntity entity = (StreamEntity)obj;
+        System.out.println(obj.toString());
+        ois.close();
+        new File("word.txt").delete();
+    }
+
     /*文件压缩  原生不支持中文文件目录*/
     @Test
     public void testZipFile() throws Exception {
-        unZip("cronCreator.zip");
-        zip("cronCreator.zip");
+        unZip("swing.zip");
+        zip("swing.zip");
     }
 
 

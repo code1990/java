@@ -16,6 +16,8 @@ public class InternetServerTest {
     3.服务端接受连接请求 同时创建一个新的socket等待其他的连接
     InetAddress类与IP地址有关的信息
     Socket套接字 ServerSocket
+    serversocket类是一个封装支持TCP协议的操作类 工作在服务端接受客户端请求
+    socket类 封装了一个支持tcp协议的操作类 一个socket表示一个客户端
     * */
 
     public static void main(String[] args) {

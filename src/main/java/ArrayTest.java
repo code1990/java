@@ -1,3 +1,5 @@
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Stack;
@@ -40,6 +42,21 @@ public class ArrayTest {
         System.out.println(Arrays.toString(array2));
         /*7.数组值的查找 找到则返回索引值否则返回-1*/
         System.out.println(Arrays.binarySearch(array2, 2));
+
+    }
+
+    @Test
+    public void testArrays() {
+        /*数组排序*/
+        Arrays.sort(new int[]{1, 6, 0, 2, 4, 7, 3});
+        /*数组比较*/
+        System.out.println(Arrays.equals(new int[]{1}, new int[1]));
+        /*数组填充 10个长度的数组全部填充为3*/
+        Arrays.fill(new int[10], 3);
+    }
+
+    @Test
+    public void testSort() {
         int[] sortArray = new int[20];
         for (int i = 0; i < 20; i++) {
             int random = (int) (Math.random() * 100);

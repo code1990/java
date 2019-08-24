@@ -3,6 +3,7 @@ import java.text.SimpleDateFormat;
 /**
  * @author issuser
  * @date 2019-08-21 23:23
+ * 枚举的最大作用就是限制一个对象的产生格式
  */
 public enum EnumTest {
     String(0, ""), Short(1, "0"), Integer(2, "0"), Long(3, "0"), Float(4, "0.0"),

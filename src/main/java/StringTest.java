@@ -1,3 +1,5 @@
+import org.junit.Test;
+
 /**
  * @author issuser
  * @date 2019-08-16 16:46
@@ -72,5 +74,13 @@ public class StringTest {
         sb.delete(0, 1);
         System.out.println(sb.toString());
 
+        /*字符串格式化*/
+        String name = "Green";
+        int age = 10;
+        double score = 60.112333;
+        String info = String.format("name:%s,age:%d,score:%5.2f", name, age, score);
+        System.out.println(info);
     }
+
+
 }
