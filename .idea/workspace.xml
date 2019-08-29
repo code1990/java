@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fde06a2-0444-4a42-8482-783c5848fbfd" name="Default Changelist" comment="java test book">
-      <change afterPath="$PROJECT_DIR$/thread/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread/src/main/java/ProviderConsumerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread/src/main/java/SynchronizedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread/src/main/java/ThreadTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="0fde06a2-0444-4a42-8482-783c5848fbfd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/ThreadGroupAndLocalTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,15 +36,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17858" />
-          <entry key="PLAIN_TEXT" value="107" />
+          <entry key="JAVA" value="18699" />
+          <entry key="PLAIN_TEXT" value="114" />
           <entry key="Properties" value="11" />
           <entry key="XML" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="79" />
+          <entry key="JAVA" value="80" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="4" />
           <entry key="XML" value="4" />
@@ -107,16 +102,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thread/src/main/java/ProviderConsumerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            <state relative-caret-position="81">
+              <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
               <folding>
                 <element signature="e#252#253#0" expanded="true" />
                 <element signature="e#269#270#0" expanded="true" />
                 <element signature="e#638#639#0" expanded="true" />
                 <element signature="e#676#677#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/thread/src/main/java/ThreadGroupAndLocalTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="64" column="6" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1924#2091#0" expanded="true" />
+                <element signature="e#2090#2091#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,6 +197,7 @@
         <option value="$PROJECT_DIR$/thread/src/main/java/SynchronizedTest.java" />
         <option value="$PROJECT_DIR$/thread/src/main/java/WaitNotifyTest.java" />
         <option value="$PROJECT_DIR$/thread/src/main/java/ProviderConsumerTest.java" />
+        <option value="$PROJECT_DIR$/thread/src/main/java/ThreadGroupAndLocalTest.java" />
       </list>
     </option>
   </component>
@@ -215,8 +225,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="522" />
-    <option name="y" value="191" />
+    <option name="x" value="232" />
+    <option name="y" value="262" />
     <option name="width" value="1382" />
     <option name="height" value="472" />
   </component>
@@ -274,7 +284,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567088242826" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567091006262" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tmp/spring-plugin-cli" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -300,7 +310,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ProviderConsumerTest">
+  <component name="RunManager" selected="JUnit.ThreadGroupAndLocalTest.testTimerTask">
     <configuration name="ProviderConsumerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ProviderConsumerTest" />
       <module name="thread" />
@@ -308,60 +318,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="App.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="App" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="ThreadGroupAndLocalTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ThreadGroupAndLocalTest" />
+      <module name="thread" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExceptionTest.testAssert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ExceptionTest" />
-      <option name="METHOD_NAME" value="testAssert" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProviderConsumerTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ThreadGroupAndLocalTest.tesstThreadLocal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="thread" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProviderConsumerTest" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="ThreadGroupAndLocalTest" />
+      <option name="METHOD_NAME" value="tesstThreadLocal" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadTest.testCreateThread" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ThreadGroupAndLocalTest.testInheritableThreadLocal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="thread" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ThreadTest" />
-      <option name="METHOD_NAME" value="testCreateThread" />
+      <option name="MAIN_CLASS_NAME" value="ThreadGroupAndLocalTest" />
+      <option name="METHOD_NAME" value="testInheritableThreadLocal" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadGroupAndLocalTest.testTimerTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="thread" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ThreadGroupAndLocalTest" />
+      <option name="METHOD_NAME" value="testTimerTask" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ExceptionTest.testAssert" />
-      <item itemvalue="JUnit.App.test" />
-      <item itemvalue="JUnit.ThreadTest.testCreateThread" />
-      <item itemvalue="JUnit.ProviderConsumerTest.test" />
       <item itemvalue="Application.ProviderConsumerTest" />
+      <item itemvalue="JUnit.ThreadGroupAndLocalTest.tesstThreadLocal" />
+      <item itemvalue="Application.ThreadGroupAndLocalTest" />
+      <item itemvalue="JUnit.ThreadGroupAndLocalTest.testInheritableThreadLocal" />
+      <item itemvalue="JUnit.ThreadGroupAndLocalTest.testTimerTask" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ThreadGroupAndLocalTest.testTimerTask" />
+        <item itemvalue="JUnit.ThreadGroupAndLocalTest.testInheritableThreadLocal" />
+        <item itemvalue="Application.ThreadGroupAndLocalTest" />
+        <item itemvalue="JUnit.ThreadGroupAndLocalTest.tesstThreadLocal" />
         <item itemvalue="Application.ProviderConsumerTest" />
-        <item itemvalue="JUnit.ProviderConsumerTest.test" />
-        <item itemvalue="JUnit.ThreadTest.testCreateThread" />
-        <item itemvalue="JUnit.App.test" />
-        <item itemvalue="JUnit.ExceptionTest.testAssert" />
       </list>
     </recent_temporary>
   </component>
@@ -453,25 +460,17 @@
       <option name="project" value="LOCAL" />
       <updated>1566644772229</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="thread">
+      <created>1567088329775</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1567088329775</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ExceptionTest_testAssert - 2019.08.24 at 17h 29m 45s.xml">
-      <configuration name="ExceptionTest.testAssert" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="App_test - 2019.08.26 at 14h 45m 54s.xml">
-      <configuration name="App.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="App_test - 2019.08.26 at 14h 47m 29s.xml">
-      <configuration name="App.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="App_test - 2019.08.26 at 14h 47m 46s.xml">
-      <configuration name="App.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="App_test - 2019.08.26 at 14h 59m 12s.xml">
-      <configuration name="App.test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="App_test - 2019.08.26 at 14h 59m 26s.xml">
       <configuration name="App.test" configurationId="JUnit" />
     </history-entry>
@@ -487,9 +486,24 @@
     <history-entry file="ProviderConsumerTest_test - 2019.08.29 at 22h 16m 10s.xml">
       <configuration name="ProviderConsumerTest.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ThreadGroupAndLocalTest_tesstThreadLocal - 2019.08.29 at 22h 46m 28s.xml">
+      <configuration name="ThreadGroupAndLocalTest.tesstThreadLocal" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadGroupAndLocalTest_tesstThreadLocal - 2019.08.29 at 22h 46m 45s.xml">
+      <configuration name="ThreadGroupAndLocalTest.tesstThreadLocal" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadGroupAndLocalTest_tesstThreadLocal - 2019.08.29 at 22h 47m 06s.xml">
+      <configuration name="ThreadGroupAndLocalTest.tesstThreadLocal" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadGroupAndLocalTest_testInheritableThreadLocal - 2019.08.29 at 22h 56m 24s.xml">
+      <configuration name="ThreadGroupAndLocalTest.testInheritableThreadLocal" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadGroupAndLocalTest_testTimerTask - 2019.08.29 at 23h 00m 01s.xml">
+      <configuration name="ThreadGroupAndLocalTest.testTimerTask" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="566" y="108" width="1382" height="472" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.27155825" />
@@ -501,7 +515,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.18330605" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.50442475" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.23404256" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -561,7 +575,8 @@
     <MESSAGE value="java stream" />
     <MESSAGE value="java base end" />
     <MESSAGE value="java test book" />
-    <option name="LAST_COMMIT_MESSAGE" value="java test book" />
+    <MESSAGE value="thread" />
+    <option name="LAST_COMMIT_MESSAGE" value="thread" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/GrandParent.java" />
@@ -842,13 +857,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/thread/src/main/java/ProviderConsumerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        <state relative-caret-position="81">
+          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
           <folding>
             <element signature="e#252#253#0" expanded="true" />
             <element signature="e#269#270#0" expanded="true" />
             <element signature="e#638#639#0" expanded="true" />
             <element signature="e#676#677#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thread/src/main/java/ThreadGroupAndLocalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="64" column="6" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1924#2091#0" expanded="true" />
+            <element signature="e#2090#2091#0" expanded="true" />
           </folding>
         </state>
       </provider>
