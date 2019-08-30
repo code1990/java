@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fde06a2-0444-4a42-8482-783c5848fbfd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/thread/src/main/java/ThreadGroupAndLocalTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/ExecutorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/ParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread/src/main/java/SynchronierTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,9 +20,10 @@
     <session id="226626353">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.33" value="1" />
@@ -31,20 +34,21 @@
           <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.76" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.open.time.98" value="1" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="18699" />
-          <entry key="PLAIN_TEXT" value="114" />
+          <entry key="JAVA" value="20278" />
+          <entry key="PLAIN_TEXT" value="122" />
           <entry key="Properties" value="11" />
           <entry key="XML" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="80" />
+          <entry key="JAVA" value="85" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="4" />
           <entry key="XML" value="4" />
@@ -55,77 +59,26 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Son.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-              <folding>
-                <element signature="e#3021#3022#0" expanded="true" />
-                <element signature="e#3088#3089#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thread/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thread/src/main/java/ThreadTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-              <folding>
-                <element signature="e#559#560#0" expanded="true" />
-                <element signature="e#618#619#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thread/src/main/java/SynchronizedTest.java">
+        <entry file="file://$PROJECT_DIR$/thread/src/main/java/ExecutorTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
-              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
-                <element signature="e#442#443#0" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thread/src/main/java/ProviderConsumerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-              <folding>
-                <element signature="e#252#253#0" expanded="true" />
-                <element signature="e#269#270#0" expanded="true" />
-                <element signature="e#638#639#0" expanded="true" />
-                <element signature="e#676#677#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/thread/src/main/java/ThreadGroupAndLocalTest.java">
+        <entry file="file://$PROJECT_DIR$/thread/src/main/java/ParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="64" column="6" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="9" />
+            <state relative-caret-position="227">
+              <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1924#2091#0" expanded="true" />
-                <element signature="e#2090#2091#0" expanded="true" />
+                <element signature="e#1670#1671#0" expanded="true" />
+                <element signature="e#1722#1723#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -190,7 +143,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ObjectHighTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/PackageClassTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Son.java" />
-        <option value="$PROJECT_DIR$/src/test/java/App.java" />
         <option value="$PROJECT_DIR$/thread/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/thread/src/main/java/ThreadTest.java" />
@@ -198,6 +150,11 @@
         <option value="$PROJECT_DIR$/thread/src/main/java/WaitNotifyTest.java" />
         <option value="$PROJECT_DIR$/thread/src/main/java/ProviderConsumerTest.java" />
         <option value="$PROJECT_DIR$/thread/src/main/java/ThreadGroupAndLocalTest.java" />
+        <option value="$PROJECT_DIR$/thread/src/main/java/ConcurrentTest.java" />
+        <option value="$PROJECT_DIR$/thread/src/main/java/SynchronierTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/App.java" />
+        <option value="$PROJECT_DIR$/thread/src/main/java/ExecutorTest.java" />
+        <option value="$PROJECT_DIR$/thread/src/main/java/ParserTest.java" />
       </list>
     </option>
   </component>
@@ -225,8 +182,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="232" />
-    <option name="y" value="262" />
+    <option name="x" value="605" />
+    <option name="y" value="357" />
     <option name="width" value="1382" />
     <option name="height" value="472" />
   </component>
@@ -236,6 +193,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,6 +204,11 @@
             <path>
               <item name="java" type="b2602c69:ProjectViewProjectNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="thread" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -268,23 +231,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="thread" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567091006262" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567172424049" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tmp/spring-plugin-cli" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -293,6 +248,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\tmp\gitbook\java\src\test\java" />
       <recent name="E:\tmp\gitbook\java" />
       <recent name="E:\tmp\gitbook\java\src\main" />
       <recent name="E:\tmp\gitbook\java\src\main\java" />
@@ -310,26 +266,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ThreadGroupAndLocalTest.testTimerTask">
-    <configuration name="ProviderConsumerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ProviderConsumerTest" />
-      <module name="thread" />
+  <component name="RunManager" selected="JUnit.ParserTest.testCountDownLatch">
+    <configuration name="App.testInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <option name="METHOD_NAME" value="testInfo" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadGroupAndLocalTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ThreadGroupAndLocalTest" />
-      <module name="thread" />
+    <configuration name="App.testInfo123" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <option name="METHOD_NAME" value="testInfo123" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadGroupAndLocalTest.tesstThreadLocal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParserTest.testCountDownLatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="thread" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ThreadGroupAndLocalTest" />
-      <option name="METHOD_NAME" value="tesstThreadLocal" />
+      <option name="MAIN_CLASS_NAME" value="ParserTest" />
+      <option name="METHOD_NAME" value="testCountDownLatch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -356,19 +318,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ProviderConsumerTest" />
-      <item itemvalue="JUnit.ThreadGroupAndLocalTest.tesstThreadLocal" />
-      <item itemvalue="Application.ThreadGroupAndLocalTest" />
       <item itemvalue="JUnit.ThreadGroupAndLocalTest.testInheritableThreadLocal" />
       <item itemvalue="JUnit.ThreadGroupAndLocalTest.testTimerTask" />
+      <item itemvalue="JUnit.App.testInfo" />
+      <item itemvalue="JUnit.App.testInfo123" />
+      <item itemvalue="JUnit.ParserTest.testCountDownLatch" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ParserTest.testCountDownLatch" />
+        <item itemvalue="JUnit.App.testInfo123" />
+        <item itemvalue="JUnit.App.testInfo" />
         <item itemvalue="JUnit.ThreadGroupAndLocalTest.testTimerTask" />
         <item itemvalue="JUnit.ThreadGroupAndLocalTest.testInheritableThreadLocal" />
-        <item itemvalue="Application.ThreadGroupAndLocalTest" />
-        <item itemvalue="JUnit.ThreadGroupAndLocalTest.tesstThreadLocal" />
-        <item itemvalue="Application.ProviderConsumerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -467,46 +429,53 @@
       <option name="project" value="LOCAL" />
       <updated>1567088329775</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="thread">
+      <created>1567091032697</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1567091032697</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="App_test - 2019.08.26 at 14h 59m 26s.xml">
-      <configuration name="App.test" configurationId="JUnit" />
+    <history-entry file="App_testInfo123 - 2019.08.30 at 15h 06m 26s.xml">
+      <configuration name="App.testInfo123" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreadTest_testCreateThread - 2019.08.29 at 20h 03m 24s.xml">
-      <configuration name="ThreadTest.testCreateThread" configurationId="JUnit" />
+    <history-entry file="App_testInfo123 - 2019.08.30 at 15h 09m 13s.xml">
+      <configuration name="App.testInfo123" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreadTest_testCreateThread - 2019.08.29 at 20h 04m 34s.xml">
-      <configuration name="ThreadTest.testCreateThread" configurationId="JUnit" />
+    <history-entry file="App_testInfo123 - 2019.08.30 at 15h 11m 07s.xml">
+      <configuration name="App.testInfo123" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProviderConsumerTest_test - 2019.08.29 at 22h 15m 51s.xml">
-      <configuration name="ProviderConsumerTest.test" configurationId="JUnit" />
+    <history-entry file="App_testInfo123 - 2019.08.30 at 15h 11m 56s.xml">
+      <configuration name="App.testInfo123" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProviderConsumerTest_test - 2019.08.29 at 22h 16m 10s.xml">
-      <configuration name="ProviderConsumerTest.test" configurationId="JUnit" />
+    <history-entry file="App_testInfo123 - 2019.08.30 at 15h 14m 08s.xml">
+      <configuration name="App.testInfo123" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreadGroupAndLocalTest_tesstThreadLocal - 2019.08.29 at 22h 46m 28s.xml">
-      <configuration name="ThreadGroupAndLocalTest.tesstThreadLocal" configurationId="JUnit" />
+    <history-entry file="App_testInfo123 - 2019.08.30 at 15h 18m 17s.xml">
+      <configuration name="App.testInfo123" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreadGroupAndLocalTest_tesstThreadLocal - 2019.08.29 at 22h 46m 45s.xml">
-      <configuration name="ThreadGroupAndLocalTest.tesstThreadLocal" configurationId="JUnit" />
+    <history-entry file="App_testInfo123 - 2019.08.30 at 15h 20m 23s.xml">
+      <configuration name="App.testInfo123" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreadGroupAndLocalTest_tesstThreadLocal - 2019.08.29 at 22h 47m 06s.xml">
-      <configuration name="ThreadGroupAndLocalTest.tesstThreadLocal" configurationId="JUnit" />
+    <history-entry file="App_testInfo123 - 2019.08.30 at 15h 23m 13s.xml">
+      <configuration name="App.testInfo123" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreadGroupAndLocalTest_testInheritableThreadLocal - 2019.08.29 at 22h 56m 24s.xml">
-      <configuration name="ThreadGroupAndLocalTest.testInheritableThreadLocal" configurationId="JUnit" />
+    <history-entry file="App_testInfo123 - 2019.08.30 at 15h 23m 24s.xml">
+      <configuration name="App.testInfo123" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreadGroupAndLocalTest_testTimerTask - 2019.08.29 at 23h 00m 01s.xml">
-      <configuration name="ThreadGroupAndLocalTest.testTimerTask" configurationId="JUnit" />
+    <history-entry file="ParserTest_testCountDownLatch - 2019.08.30 at 21h 18m 58s.xml">
+      <configuration name="ParserTest.testCountDownLatch" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="566" y="108" width="1382" height="472" extended-state="0" />
+    <frame x="605" y="357" width="1382" height="472" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27155825" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2753404" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -515,8 +484,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.50442475" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.23404256" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.02359882" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3666121" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -801,31 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Son.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding>
-            <element signature="e#3021#3022#0" expanded="true" />
-            <element signature="e#3088#3089#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thread/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -833,21 +777,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Son.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thread/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/thread/src/main/java/ThreadTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding>
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-          </folding>
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thread/src/main/java/SynchronizedTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        <state relative-caret-position="405">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding>
             <element signature="e#442#443#0" expanded="true" />
             <element signature="e#474#475#0" expanded="true" />
@@ -858,24 +812,60 @@
     <entry file="file://$PROJECT_DIR$/thread/src/main/java/ProviderConsumerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-          <folding>
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-          </folding>
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thread/src/main/java/ThreadGroupAndLocalTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="64" column="6" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="9" />
+        <state relative-caret-position="270">
+          <caret line="10" selection-start-line="9" selection-end-line="78" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1924#2091#0" expanded="true" />
-            <element signature="e#2090#2091#0" expanded="true" />
+            <element signature="e#1948#2107#0" expanded="true" />
+            <element signature="e#2106#2107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thread/src/main/java/SynchronierTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TxtUtil.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thread/src/main/java/ExecutorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thread/src/main/java/ParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1670#1671#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
           </folding>
         </state>
       </provider>
