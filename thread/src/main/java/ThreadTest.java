@@ -1,9 +1,13 @@
 import org.junit.Test;
 
+import java.util.concurrent.Callable;
+
 /**
  * @author issuser
  * @date 2019-08-29 19:52
  *
+ * 线程是操作系统动态执行的基本单元
+ * 进程是基本的分配单元
  * 这些封装了执行序列的线程对象成为runnable
  *
  * java虚拟机为每一个线程分配独立的JVM栈控件避免干扰
@@ -75,5 +79,12 @@ class MyThread extends Thread{
     @Override
     public void run(){
         System.out.println("使用继承的方式来创建线程");
+    }
+}
+/*使用callable可以有返回值 可以抛出异常*/
+class CallThread implements Callable<Integer>{
+    @Override
+    public Integer call() throws Exception {
+        return 200;
     }
 }

@@ -1,5 +1,6 @@
 import org.junit.Test;
 
+import java.util.Random;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.locks.*;
@@ -40,5 +41,55 @@ public class LockTest {
         ReadWriteLock lock = new ReentrantReadWriteLock(true);
         final Lock rlock = lock.readLock();
         final Lock wlock = lock.writeLock();
+        rlock.lock();
+        System.out.println("123");
+        rlock.unlock();
+    }
+
+    /*使用lock接口实现卖票*/
+    private int num = 30;
+    private Lock lock = new ReentrantLock();
+
+    public  void sale(){
+        lock.lock();
+        if(num>30){
+            System.out.println(Thread.currentThread().getName()+"sale"+num--);
+        }
+    }
+    @Test
+    public void testSale(){
+        LockTest test = new LockTest();
+        new Thread(()->{
+            for (int i = 0; i <40 ; i++) {
+                test.sale();
+            }
+        },"AA").start();
+        new Thread(()->{
+            for (int i = 0; i <40 ; i++) {
+                test.sale();
+            }
+        },"BB").start();
+    }
+
+    @Test
+    public void test(){
+        /*线程间通信 synchronized使用wait notify
+        * Lock使用await+signal*/
+        final Lock lock = new ReentrantLock();
+        final Condition notFull = lock.newCondition();
+        final Condition notEmpty = lock.newCondition();
+
+        /*先持有锁 然后等待 最后唤醒*/
+        lock.lock();
+        int random = new Random().nextInt(2);
+        while (random!=2){
+            try {
+                notFull.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            random++;
+        }
+        notFull.signalAll();
     }
 }
