@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fde06a2-0444-4a42-8482-783c5848fbfd" name="Default Changelist" comment="">
+    <list default="true" id="0fde06a2-0444-4a42-8482-783c5848fbfd" name="Default Changelist" comment="java8stream">
       <change afterPath="$PROJECT_DIR$/java8/src/main/java/Ch01Java8Base.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/java8/src/main/java/LambdaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java8/src/main/java/java8/ch3Stream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java8/src/main/java/java8/StreamCore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java8/src/main/java/java8/ch4ClassLibary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java8/src/main/java/java8/streamCore.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -46,15 +48,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="26070" />
-          <entry key="PLAIN_TEXT" value="127" />
+          <entry key="JAVA" value="26947" />
+          <entry key="PLAIN_TEXT" value="133" />
           <entry key="Properties" value="11" />
           <entry key="XML" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="101" />
+          <entry key="JAVA" value="103" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="4" />
           <entry key="XML" value="6" />
@@ -64,37 +66,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/ch2Lambda.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/ch3Stream.java">
+        <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/StreamCore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="139" column="30" selection-start-line="139" selection-start-column="30" selection-end-line="139" selection-end-column="30" />
+            <state relative-caret-position="248">
+              <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#323#324#0" expanded="true" />
-                <element signature="e#350#351#0" expanded="true" />
-                <element signature="e#390#391#0" expanded="true" />
-                <element signature="e#422#423#0" expanded="true" />
-                <element signature="e#452#453#0" expanded="true" />
-                <element signature="e#478#479#0" expanded="true" />
-                <element signature="e#516#517#0" expanded="true" />
-                <element signature="e#546#547#0" expanded="true" />
-                <element signature="e#579#580#0" expanded="true" />
-                <element signature="e#608#609#0" expanded="true" />
-                <element signature="e#652#653#0" expanded="true" />
-                <element signature="e#688#689#0" expanded="true" />
+                <element signature="e#215#216#0" expanded="true" />
+                <element signature="e#250#251#0" expanded="true" />
+                <element signature="e#294#295#0" expanded="true" />
+                <element signature="e#334#335#0" expanded="true" />
+                <element signature="e#365#366#0" expanded="true" />
+                <element signature="e#399#400#0" expanded="true" />
+                <element signature="e#438#439#0" expanded="true" />
+                <element signature="e#476#477#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,6 +102,7 @@
       <find>ImportEnumTest</find>
       <find>num</find>
       <find>Fu</find>
+      <find>toList</find>
     </findStrings>
     <replaceStrings>
       <replace>EnumTest</replace>
@@ -128,8 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/InternetTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/InternetClientTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ReflectEntityTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ReflectTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ReflectUtil.java" />
@@ -179,6 +164,8 @@
         <option value="$PROJECT_DIR$/java8/src/main/java/LambdaTest.java" />
         <option value="$PROJECT_DIR$/java8/src/main/java/java8/ch2Lambda.java" />
         <option value="$PROJECT_DIR$/java8/src/main/java/java8/ch3Stream.java" />
+        <option value="$PROJECT_DIR$/java8/src/main/java/java8/ch4ClassLibary.java" />
+        <option value="$PROJECT_DIR$/java8/src/main/java/java8/StreamCore.java" />
       </list>
     </option>
   </component>
@@ -206,10 +193,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="184" />
+    <option name="y" value="210" />
     <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -267,7 +254,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567815807928" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567848489485" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tmp/spring-plugin-cli" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -275,6 +262,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\tmp\gitbook\java\java8\src\main\java\java8" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\tmp\gitbook\java\src\test\java" />
       <recent name="E:\tmp\gitbook\java" />
@@ -294,7 +284,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ch3Stream.testComplexDemo">
+  <component name="RunManager" selected="JUnit.StreamCore.test01CreateStream">
+    <configuration name="StreamCore.test01CreateStream" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="java8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="java8" />
+      <option name="MAIN_CLASS_NAME" value="java8.StreamCore" />
+      <option name="METHOD_NAME" value="test01CreateStream" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ch3Stream.testComplexDemo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java8" />
       <extension name="coverage">
@@ -306,54 +312,6 @@
       <option name="PACKAGE_NAME" value="java8" />
       <option name="MAIN_CLASS_NAME" value="java8.ch3Stream" />
       <option name="METHOD_NAME" value="testComplexDemo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ch3Stream.testCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java8" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="java8.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="java8" />
-      <option name="MAIN_CLASS_NAME" value="java8.ch3Stream" />
-      <option name="METHOD_NAME" value="testCount" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ch3Stream.testFor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java8" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="java8.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="java8" />
-      <option name="MAIN_CLASS_NAME" value="java8.ch3Stream" />
-      <option name="METHOD_NAME" value="testFor" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ch3Stream.testStream" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java8" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="java8.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="java8" />
-      <option name="MAIN_CLASS_NAME" value="java8.ch3Stream" />
-      <option name="METHOD_NAME" value="testStream" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -375,20 +333,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ch4ClassLibary.testOptional" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="java8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="java8" />
+      <option name="MAIN_CLASS_NAME" value="java8.ch4ClassLibary" />
+      <option name="METHOD_NAME" value="testOptional" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ch4ClassLibary.testParentDefaultMethodUse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="java8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="java8" />
+      <option name="MAIN_CLASS_NAME" value="java8.ch4ClassLibary" />
+      <option name="METHOD_NAME" value="testParentDefaultMethodUse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.ch3Stream.testFor" />
-      <item itemvalue="JUnit.ch3Stream.testStream" />
-      <item itemvalue="JUnit.ch3Stream.testCount" />
       <item itemvalue="JUnit.ch3Stream.testStreamApi" />
       <item itemvalue="JUnit.ch3Stream.testComplexDemo" />
+      <item itemvalue="JUnit.ch4ClassLibary.testParentDefaultMethodUse" />
+      <item itemvalue="JUnit.ch4ClassLibary.testOptional" />
+      <item itemvalue="JUnit.StreamCore.test01CreateStream" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StreamCore.test01CreateStream" />
+        <item itemvalue="JUnit.ch4ClassLibary.testOptional" />
+        <item itemvalue="JUnit.ch4ClassLibary.testParentDefaultMethodUse" />
         <item itemvalue="JUnit.ch3Stream.testComplexDemo" />
         <item itemvalue="JUnit.ch3Stream.testStreamApi" />
-        <item itemvalue="JUnit.ch3Stream.testCount" />
-        <item itemvalue="JUnit.ch3Stream.testStream" />
-        <item itemvalue="JUnit.ch3Stream.testFor" />
       </list>
     </recent_temporary>
   </component>
@@ -536,25 +526,17 @@
       <option name="project" value="LOCAL" />
       <updated>1567786214917</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="java8stream">
+      <created>1567815852424</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1567815852426</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ch3Stream_testFor - 2019.09.07 at 07h 05m 05s.xml">
-      <configuration name="ch3Stream.testFor" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ch3Stream_testFor - 2019.09.07 at 07h 05m 22s.xml">
-      <configuration name="ch3Stream.testFor" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ch3Stream_testStream - 2019.09.07 at 07h 10m 46s.xml">
-      <configuration name="ch3Stream.testStream" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ch3Stream_testCount - 2019.09.07 at 07h 17m 13s.xml">
-      <configuration name="ch3Stream.testCount" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ch3Stream_testStreamApi - 2019.09.07 at 07h 50m 22s.xml">
-      <configuration name="ch3Stream.testStreamApi" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ch3Stream_testStreamApi - 2019.09.07 at 07h 50m 55s.xml">
       <configuration name="ch3Stream.testStreamApi" configurationId="JUnit" />
     </history-entry>
@@ -570,12 +552,27 @@
     <history-entry file="ch3Stream_testComplexDemo - 2019.09.07 at 08h 05m 08s.xml">
       <configuration name="ch3Stream.testComplexDemo" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ch4ClassLibary_testParentDefaultMethodUse - 2019.09.07 at 15h 49m 30s.xml">
+      <configuration name="ch4ClassLibary.testParentDefaultMethodUse" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ch4ClassLibary_testOptional - 2019.09.07 at 16h 16m 05s.xml">
+      <configuration name="ch4ClassLibary.testOptional" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ch4ClassLibary_testOptional - 2019.09.07 at 16h 18m 33s.xml">
+      <configuration name="ch4ClassLibary.testOptional" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ch4ClassLibary_testOptional - 2019.09.07 at 16h 19m 55s.xml">
+      <configuration name="ch4ClassLibary.testOptional" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StreamCore_test01CreateStream - 2019.09.07 at 16h 51m 50s.xml">
+      <configuration name="StreamCore.test01CreateStream" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="115" y="342" width="1382" height="788" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2685325" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2677761" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -584,7 +581,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.19694656" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.09819967" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3666121" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -646,23 +643,10 @@
     <MESSAGE value="java test book" />
     <MESSAGE value="thread" />
     <MESSAGE value="java8" />
-    <option name="LAST_COMMIT_MESSAGE" value="java8" />
+    <MESSAGE value="java8stream" />
+    <option name="LAST_COMMIT_MESSAGE" value="java8stream" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/HelloWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FlowControlTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FieldMethodParamterAnnotaion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -968,20 +952,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/ch2Lambda.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/ch3Stream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="139" column="30" selection-start-line="139" selection-start-column="30" selection-end-line="139" selection-end-column="30" />
+        <state relative-caret-position="2814">
+          <caret line="179" column="40" lean-forward="true" selection-start-line="179" selection-start-column="40" selection-end-line="179" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#323#324#0" expanded="true" />
@@ -996,6 +970,50 @@
             <element signature="e#608#609#0" expanded="true" />
             <element signature="e#652#653#0" expanded="true" />
             <element signature="e#688#689#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/ch2Lambda.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/ch4ClassLibary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1057">
+          <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#194#195#0" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/StreamCore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#250#251#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
           </folding>
         </state>
       </provider>
