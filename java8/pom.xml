@@ -9,6 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <!--冗余代码消除是microbenchmark中众所周知的问题-->
+    <dependencies>
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-core</artifactId>
+            <version>0.4.2</version>
+        </dependency>
+    </dependencies>
     <artifactId>java8</artifactId>
 
     <build>

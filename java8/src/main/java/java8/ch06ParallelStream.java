@@ -1,5 +1,10 @@
 package java8;
 
+import org.openjdk.jmh.annotations.GenerateMicroBenchmark;
+import org.openjdk.jmh.runner.Runner;
+import org.openjdk.jmh.runner.options.Options;
+import org.openjdk.jmh.runner.options.OptionsBuilder;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -56,6 +61,16 @@ parallelSort 并行化对数组元素排序
         double[] array = new double[size];
         Arrays.parallelSetAll(array, i -> i);
         return array;
+    }
+
+    /*<!--冗余代码消除是microbenchmark中众所周知的问题-->*/
+    @GenerateMicroBenchmark
+    public void test() throws Exception{
+        Options opt = new OptionsBuilder()
+                .include(".*" + ch06ParallelStream.class.getSimpleName() + ".*")
+                .forks(1)
+                .build();
+        new Runner(opt).run();
     }
 }
 

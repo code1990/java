@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fde06a2-0444-4a42-8482-783c5848fbfd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/java8/src/main/java/java8/ch07LambdaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java8/src/main/java/java8/ch05HighCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/java8/src/main/java/java8/ch05HighCollector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java8/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/java8/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java8/src/main/java/java8/ch06ParallelStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/java8/src/main/java/java8/ch06ParallelStream.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,36 +47,71 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="28650" />
+          <entry key="JAVA" value="28730" />
           <entry key="PLAIN_TEXT" value="133" />
           <entry key="Properties" value="11" />
-          <entry key="XML" value="58" />
+          <entry key="XML" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="106" />
+          <entry key="JAVA" value="108" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="4" />
-          <entry key="XML" value="6" />
+          <entry key="XML" value="7" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/ch05HighCollector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1781">
-              <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+            <state relative-caret-position="169">
+              <caret line="84" selection-start-line="84" selection-end-line="84" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2302#2303#0" expanded="true" />
-                <element signature="e#2325#2326#0" expanded="true" />
-                <element signature="e#3064#3065#0" expanded="true" />
-                <element signature="e#3086#3087#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/ch06ParallelStream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2158">
+              <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#295#296#0" expanded="true" />
+                <element signature="e#362#363#0" expanded="true" />
+                <element signature="e#1570#1571#0" expanded="true" />
+                <element signature="e#1633#1634#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/ch07LambdaTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1377">
+              <caret line="51" column="49" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#347#355#0" expanded="true" />
+                <element signature="e#1085#1093#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java8/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -120,8 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ReflectUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ConstructorAnnotaion.java" />
         <option value="$PROJECT_DIR$/src/main/java/FieldMethodParamterAnnotaion.java" />
         <option value="$PROJECT_DIR$/src/main/java/A.java" />
         <option value="$PROJECT_DIR$/src/main/java/AnnotationClassTest.java" />
@@ -162,7 +197,6 @@
         <option value="$PROJECT_DIR$/thread/src/main/java/ExecutorTest.java" />
         <option value="$PROJECT_DIR$/thread/src/main/java/LockTest.java" />
         <option value="$PROJECT_DIR$/thread/src/main/java/ParserTest.java" />
-        <option value="$PROJECT_DIR$/java8/pom.xml" />
         <option value="$PROJECT_DIR$/java8/src/main/java/Ch01Java8Base.java" />
         <option value="$PROJECT_DIR$/java8/src/main/java/LambdaTest.java" />
         <option value="$PROJECT_DIR$/java8/src/main/java/java8/ch2Lambda.java" />
@@ -171,6 +205,9 @@
         <option value="$PROJECT_DIR$/java8/src/main/java/java8/StreamCore.java" />
         <option value="$PROJECT_DIR$/java8/src/main/java/java8/ch05MethodQuote.java" />
         <option value="$PROJECT_DIR$/java8/src/main/java/java8/ch05HighCollector.java" />
+        <option value="$PROJECT_DIR$/java8/pom.xml" />
+        <option value="$PROJECT_DIR$/java8/src/main/java/java8/ch06ParallelStream.java" />
+        <option value="$PROJECT_DIR$/java8/src/main/java/java8/ch07LambdaTest.java" />
       </list>
     </option>
   </component>
@@ -198,8 +235,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="680" />
-    <option name="y" value="102" />
+    <option name="x" value="604" />
+    <option name="y" value="92" />
     <option name="width" value="1382" />
     <option name="height" value="788" />
   </component>
@@ -258,7 +295,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="java8" type="462c0819:PsiDirectoryNode" />
-              <item name="ch3Stream.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+              <item name="ch06ParallelStream.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
@@ -269,7 +306,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567869387633" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567870929358" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tmp/spring-plugin-cli" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -559,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567853744603</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="java8stream">
+      <created>1567869411343</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1567869411343</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -596,8 +640,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27155825" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.27155825" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -606,7 +651,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6739788" weight="0.5220949" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6739788" visible="true" weight="0.09656301" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3666121" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -672,20 +717,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="java8stream" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ConstructorAnnotaion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/InternetClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -935,13 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java8/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java8/src/main/java/LambdaTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1006,6 +1030,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/ch05HighCollector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/ch3Stream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1016,16 +1050,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/ch05HighCollector.java">
+    <entry file="file://$PROJECT_DIR$/java8/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1781">
-          <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+        <state relative-caret-position="135">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/ch06ParallelStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2158">
+          <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2302#2303#0" expanded="true" />
-            <element signature="e#2325#2326#0" expanded="true" />
-            <element signature="e#3064#3065#0" expanded="true" />
-            <element signature="e#3086#3087#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#1570#1571#0" expanded="true" />
+            <element signature="e#1633#1634#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java8/src/main/java/java8/ch07LambdaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="51" column="49" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#347#355#0" expanded="true" />
+            <element signature="e#1085#1093#0" expanded="true" />
           </folding>
         </state>
       </provider>
