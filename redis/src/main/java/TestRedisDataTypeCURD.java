@@ -2,10 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author issuser
@@ -55,14 +52,14 @@ public class TestRedisDataTypeCURD {
     }
     @Test
     public void testRedisZSet(){
-        jedis.zadd("user",12,"jim");
-        jedis.zadd("user",22,"tom");
-        jedis.zadd("user",32,"lily");
+        jedis.zadd("user1",12,"jim1");
+        jedis.zadd("user1",22,"tom1");
+        jedis.zadd("user1",32,"lily1");
 
-        System.out.println(jedis.zrange("user",0,-1));
-        System.out.println(jedis.zrem("user","jim"));
-        System.out.println(jedis.zrange("user",0,-1));
-        System.out.println(jedis.zrank("user","tom"));
+        System.out.println(jedis.zrange("user1",0,-1));
+        System.out.println(jedis.zrem("user1","jim1"));
+        System.out.println(jedis.zrange("user1",0,-1));
+        System.out.println(jedis.zrank("user1","tom1"));
     }
     @Test
     public void testRedisHash(){
@@ -84,4 +81,30 @@ public class TestRedisDataTypeCURD {
 
     }
 
+    @Test
+    public void testForEach(){
+        Set<String> keys = jedis.keys("*");
+        for (Iterator iterator = keys.iterator(); iterator.hasNext();) {
+            String key = (String) iterator.next();
+            System.out.println(key);
+        }
+        List<String> list = jedis.lrange("mylist",0,-1);
+        for (String element : list) {
+            System.out.println(element);
+        }
+        Set<String> set1 = jedis.smembers("orders");
+        for (Iterator iterator = set1.iterator(); iterator.hasNext();) {
+            String string = (String) iterator.next();
+            System.out.println(string);
+        }
+        List<String> result = jedis.hmget("hash2", "telphone","email");
+        for (String element : result) {
+            System.out.println(element);
+        }
+        Set<String> s1 = jedis.zrange("zset01",0,-1);
+        for (Iterator iterator = s1.iterator(); iterator.hasNext();) {
+            String string = (String) iterator.next();
+            System.out.println(string);
+        }
+    }
 }

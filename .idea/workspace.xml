@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fde06a2-0444-4a42-8482-783c5848fbfd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis/src/main/java/TestRedis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis/src/main/java/TestRedisDataTypeCURD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis/src/main/java/TestJedisPoolUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis/src/main/java/TestMasterSlave.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis/src/main/java/TestTxRedis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ReflectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ReflectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis/src/main/java/TestRedisDataTypeCURD.java" beforeDir="false" afterPath="$PROJECT_DIR$/redis/src/main/java/TestRedisDataTypeCURD.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,15 +51,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="29831" />
-          <entry key="PLAIN_TEXT" value="133" />
+          <entry key="JAVA" value="30737" />
+          <entry key="PLAIN_TEXT" value="138" />
           <entry key="Properties" value="11" />
           <entry key="XML" value="72" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="114" />
+          <entry key="JAVA" value="117" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="4" />
           <entry key="XML" value="11" />
@@ -73,54 +70,27 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/redis/src/main/java/TestRedis.java">
+        <entry file="file://$PROJECT_DIR$/redis/src/main/java/TestRedisDataTypeCURD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="50" />
+            <state relative-caret-position="276">
+              <caret line="65" column="45" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#337#338#0" expanded="true" />
+                <element signature="e#388#389#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/redis/src/main/java/TestRedisDataTypeCURD.java">
+        <entry file="file://$PROJECT_DIR$/redis/src/main/java/TestTxRedis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="319">
+              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#270#271#0" expanded="true" />
-                <element signature="e#321#322#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/redis/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/AnnotationClassTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="8" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -154,9 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/CollectionTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/InternetServerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/NumberTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/IOTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/StreamEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/DateTest.java" />
@@ -205,6 +172,9 @@
         <option value="$PROJECT_DIR$/redis/pom.xml" />
         <option value="$PROJECT_DIR$/redis/src/main/java/TestRedis.java" />
         <option value="$PROJECT_DIR$/redis/src/main/java/TestRedisDataTypeCURD.java" />
+        <option value="$PROJECT_DIR$/redis/src/main/java/TestJedisPoolUtil.java" />
+        <option value="$PROJECT_DIR$/redis/src/main/java/TestMasterSlave.java" />
+        <option value="$PROJECT_DIR$/redis/src/main/java/TestTxRedis.java" />
       </list>
     </option>
   </component>
@@ -289,7 +259,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568116928751" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568120563136" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tmp/spring-plugin-cli" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -319,32 +289,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestRedisDataTypeCURD.testRedisZSet">
-    <configuration name="TestRedisDataTypeCURD.testRedisList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.TestTxRedis">
+    <configuration name="TestTxRedis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestTxRedis" />
+      <module name="redis" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestJedisPoolUtil.testJedisPool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="redis" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestRedisDataTypeCURD" />
-      <option name="METHOD_NAME" value="testRedisList" />
+      <option name="MAIN_CLASS_NAME" value="TestJedisPoolUtil" />
+      <option name="METHOD_NAME" value="testJedisPool" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRedisDataTypeCURD.testRedisSet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMasterSlave.testMasterSlave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="redis" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestRedisDataTypeCURD" />
-      <option name="METHOD_NAME" value="testRedisSet" />
+      <option name="MAIN_CLASS_NAME" value="TestMasterSlave" />
+      <option name="METHOD_NAME" value="testMasterSlave" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRedisDataTypeCURD.testRedisString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRedisDataTypeCURD.testForEach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="redis" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestRedisDataTypeCURD" />
-      <option name="METHOD_NAME" value="testRedisString" />
+      <option name="METHOD_NAME" value="testForEach" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -360,30 +337,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRedis.testConnectRedis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="redis" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestRedis" />
-      <option name="METHOD_NAME" value="testConnectRedis" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.TestRedis.testConnectRedis" />
-      <item itemvalue="JUnit.TestRedisDataTypeCURD.testRedisString" />
-      <item itemvalue="JUnit.TestRedisDataTypeCURD.testRedisList" />
-      <item itemvalue="JUnit.TestRedisDataTypeCURD.testRedisSet" />
       <item itemvalue="JUnit.TestRedisDataTypeCURD.testRedisZSet" />
+      <item itemvalue="JUnit.TestRedisDataTypeCURD.testForEach" />
+      <item itemvalue="JUnit.TestJedisPoolUtil.testJedisPool" />
+      <item itemvalue="JUnit.TestMasterSlave.testMasterSlave" />
+      <item itemvalue="Application.TestTxRedis" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestTxRedis" />
+        <item itemvalue="JUnit.TestMasterSlave.testMasterSlave" />
+        <item itemvalue="JUnit.TestJedisPoolUtil.testJedisPool" />
+        <item itemvalue="JUnit.TestRedisDataTypeCURD.testForEach" />
         <item itemvalue="JUnit.TestRedisDataTypeCURD.testRedisZSet" />
-        <item itemvalue="JUnit.TestRedisDataTypeCURD.testRedisSet" />
-        <item itemvalue="JUnit.TestRedisDataTypeCURD.testRedisList" />
-        <item itemvalue="JUnit.TestRedisDataTypeCURD.testRedisString" />
-        <item itemvalue="JUnit.TestRedis.testConnectRedis" />
       </list>
     </recent_temporary>
   </component>
@@ -580,22 +547,17 @@
       <option name="project" value="LOCAL" />
       <updated>1567951231214</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="jedis">
+      <created>1568117222649</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1568117222649</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ch4ClassLibary_testOptional - 2019.09.07 at 16h 19m 55s.xml">
-      <configuration name="ch4ClassLibary.testOptional" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StreamCore_test01CreateStream - 2019.09.07 at 16h 51m 50s.xml">
-      <configuration name="StreamCore.test01CreateStream" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="App_testInfo1233 - 2019.09.09 at 23h 53m 13s.xml">
-      <configuration name="App.testInfo1233" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestRedis_testConnectRedis - 2019.09.10 at 19h 30m 47s.xml">
-      <configuration name="TestRedis.testConnectRedis" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestRedisDataTypeCURD_testRedisString - 2019.09.10 at 19h 49m 59s.xml">
       <configuration name="TestRedisDataTypeCURD.testRedisString" configurationId="JUnit" />
     </history-entry>
@@ -614,11 +576,24 @@
     <history-entry file="TestRedisDataTypeCURD_testRedisZSet - 2019.09.10 at 20h 02m 14s.xml">
       <configuration name="TestRedisDataTypeCURD.testRedisZSet" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestRedisDataTypeCURD_testRedisZSet - 2019.09.10 at 20h 08m 30s.xml">
+      <configuration name="TestRedisDataTypeCURD.testRedisZSet" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestRedisDataTypeCURD_testForEach - 2019.09.10 at 20h 15m 10s.xml">
+      <configuration name="TestRedisDataTypeCURD.testForEach" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestJedisPoolUtil_testJedisPool - 2019.09.10 at 20h 46m 05s.xml">
+      <configuration name="TestJedisPoolUtil.testJedisPool" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestMasterSlave_testMasterSlave - 2019.09.10 at 20h 53m 50s.xml">
+      <configuration name="TestMasterSlave.testMasterSlave" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2753404" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2753404" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -627,7 +602,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6739788" visible="true" weight="0.5319149" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6739788" visible="true" weight="0.60392797" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3666121" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -690,12 +665,10 @@
     <MESSAGE value="thread" />
     <MESSAGE value="java8" />
     <MESSAGE value="java8stream" />
-    <option name="LAST_COMMIT_MESSAGE" value="java8stream" />
+    <MESSAGE value="jedis" />
+    <option name="LAST_COMMIT_MESSAGE" value="jedis" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/config.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/config.properties" />
-    <entry file="file://$PROJECT_DIR$/config.properties" />
     <entry file="file://$PROJECT_DIR$/src/main/java/IOTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3824">
@@ -1034,14 +1007,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redis/src/main/java/TestRedisDataTypeCURD.java">
+    <entry file="file://$PROJECT_DIR$/redis/src/main/java/TestMasterSlave.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="30">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis/src/main/java/TestJedisPoolUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis/src/main/java/TestRedisDataTypeCURD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="65" column="45" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis/src/main/java/TestTxRedis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
