@@ -9,6 +9,8 @@ import java.util.Arrays;
 /**
  * @author issuser
  * @date 2019-08-23 17:42
+ 
+ 包getPackage()类路径类getName()类名称继承类getSuperClass()集成类接口getInerfaces()所有的接口构造方法getConstrcutors()public的构造方法构造方法getConstrcutors(Class<?> param)public的有参构造方法构造方法getDeclaredConstructors()所有的构造方法构造方法getDeclaredConstructors所有的有参构造方法方法getMethods()public的方法方法getMethod(String name,Class<?> param)public的有参方法方法getDeclaredMethods()所有的方法方法getDeclaredMethods(Class<?> param)所有的有参方法成员变量getFields()public的成员变量成员变量getField(String name)public的有参变量成员变量getDeclaredFileds()所有的成员变量成员变量getDeclaredField(String name)所有的有参变量内部类getClasses()public的内部类内部类getDeclaredClasses()所有的内部类内部类的声明类getDeclaringClass()返回内部类的成员类
  */
 public class ReflectTest {
     private static final String classPath = "ReflectEntityTest";
