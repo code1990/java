@@ -12,6 +12,7 @@
         <module>thread</module>
         <module>java8</module>
         <module>redis</module>
+        <module>interview</module>
     </modules>
 
     <dependencies>
