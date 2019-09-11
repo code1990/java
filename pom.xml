@@ -13,6 +13,7 @@
         <module>java8</module>
         <module>redis</module>
         <module>interview</module>
+        <module>python</module>
     </modules>
 
     <dependencies>

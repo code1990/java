@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="interview" />
         <module name="java8" />
+        <module name="python" />
         <module name="redis" />
         <module name="thread" />
       </profile>
