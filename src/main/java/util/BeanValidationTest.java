@@ -1,6 +1,7 @@
 package util;
 
 import org.junit.Test;
+import org.python.antlr.ast.For;
 import util.TxtUtil;
 
 import java.io.File;
@@ -273,6 +274,13 @@ public class BeanValidationTest {
                 System.out.println(str);
             }
         }
+    }
+
+    @Test
+    public void getInfo2(){
+        String path = "F:\\pdf\\dir\\1.txt";
+//        Li
+//        For
     }
 }
 

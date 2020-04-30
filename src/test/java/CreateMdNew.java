@@ -278,10 +278,21 @@ public class CreateMdNew {
 
     @Test
     public void getChar(){
-        String name ="java微服务";
+        String name ="java微服务spark";
         String regEx2 = "[^A-Za-z]";
         Pattern p = Pattern.compile(regEx2);
         Matcher m = p.matcher(name);
+        while (m.find()){
+            System.out.println(m.group());
+        }
+        String  str="SUN公司被Oracle收购，是否意味着java被逼上了死路？";
+        String s = "\\d+.\\d+|\\w+";
+        Pattern  pattern=Pattern.compile(s);
+        Matcher  ma=pattern.matcher(str);
+
+        while(ma.find()){
+            System.out.println(ma.group());
+        }
         System.out.println(m.replaceAll("").trim());
     }
 }
