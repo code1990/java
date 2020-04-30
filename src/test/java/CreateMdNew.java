@@ -26,11 +26,11 @@ import java.util.regex.Pattern;
 public class CreateMdNew {
     private String admin = System.getProperty("user.name");
     Map<String, String> map = new HashMap<>();
+    String path = "C:\\Users\\" + admin + "\\Desktop\\124.txt";
+    List<String> list = TxtUtil.readTxt(path);
 
     @Test
     public void filterInfo() {
-        String path = "C:\\Users\\" + admin + "\\Desktop\\124.txt";
-        List<String> list = TxtUtil.readTxt(path);
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < list.size(); i++) {
             String name = list.get(i);
@@ -277,22 +277,86 @@ public class CreateMdNew {
     }
 
     @Test
-    public void getChar(){
-        String name ="java微服务spark";
+    public void getChar() {
+        String name = "java微服务spark";
         String regEx2 = "[^A-Za-z]";
         Pattern p = Pattern.compile(regEx2);
         Matcher m = p.matcher(name);
-        while (m.find()){
+        while (m.find()) {
             System.out.println(m.group());
         }
-        String  str="SUN公司被Oracle收购，是否意味着java被逼上了死路？";
+        String str = "SUN公司被Oracle收购，是否意味着java被逼上了死路？";
         String s = "\\d+.\\d+|\\w+";
-        Pattern  pattern=Pattern.compile(s);
-        Matcher  ma=pattern.matcher(str);
+        Pattern pattern = Pattern.compile(s);
+        Matcher ma = pattern.matcher(str);
 
-        while(ma.find()){
+        while (ma.find()) {
             System.out.println(ma.group());
         }
         System.out.println(m.replaceAll("").trim());
+    }
+
+    @Test
+    public void getBook() {
+        String chapter = "";
+        String chapterName = "";
+        StringBuilder sb = new StringBuilder();
+        StringBuilder sb2 = new StringBuilder();
+        for (int i = 0; i < list.size(); i++) {
+            String name = list.get(i);
+            String[] array = name.split(" ");
+            if (name.contains("第") && name.contains("章")) {
+                if (!"".equals(sb.toString())) {
+                    sb2.append("\t}\n");
+                    sb2.append("}\n");
+//                    System.out.println(">>>>>" + sb.toString());
+                    System.out.println(sb.toString());
+                    System.out.println(sb2.toString());
+                    TxtUtil.writeTxt("F:\\pdf\\dir\\Chapter" + chapter + "Test.java", sb2.toString());
+                    TxtUtil.writeTxt("F:\\pdf\\dir\\" + chapterName + ".md", sb.toString());
+                    sb.setLength(0);
+                    sb2.setLength(0);
+                }
+                chapter = getNumber(name);
+                if (new Integer(chapter) < 10) {
+                    chapter = "0" + chapter;
+                }
+                chapterName = "第" + chapter + "章" + name.split("　")[1];
+//                System.out.println(chapter);
+//                System.out.println(name);
+//                System.out.println();
+                sb.append("## " + name + "\n");
+                sb2.append("import org.junit.Test;\n" +
+                        "\n" +
+                        "public class Chapter" + chapter + "Test {\n");
+            } else {
+                if (sb2.toString().contains("void")) {
+                    sb2.append("\t\n\t}\n\n");
+                }
+                sb.append("### " + name + "\n\n\n\n");
+                String tmp = getNumber(name);
+                if (new Integer(tmp) < 10) {
+                    tmp = "0" + tmp;
+                }
+                sb2.append("    @Test\n" +
+                        "    public void test" + tmp + "() {\n");
+                sb2.append("\t\t// " + name + "\n");
+//                System.out.println(tmp+"\n"+name);
+            }
+            if (i == list.size() - 1) {
+                sb.append("\t}\n");
+                sb.append("}\n");
+//                    System.out.println(">>>>>" + sb.toString());
+                TxtUtil.writeTxt("F:\\pdf\\dir\\Chapter" + chapter + "Test.java", sb2.toString());
+                sb.setLength(0);
+                sb2.append("\t}\n");
+                sb2.append("}\n");
+//                    System.out.println(">>>>>" + sb.toString());
+                TxtUtil.writeTxt("F:\\pdf\\dir\\" + chapterName + ".md", sb.toString());
+                sb2.setLength(0);
+            }
+//            System.out.println(name);
+        }
+//        System.out.println(sb.toString());
     }
 }

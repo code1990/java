@@ -49,25 +49,6 @@ public class WorkFileTest {
                     map.put(tmp, map.get(tmp) + 1);
                 }
             }
-//            System.out.println(name);
-//            String[] array = name.split("\\,");
-//            System.out.println(array.length);
-//            name = array[array.length - 1].trim();
-//            System.out.println(array[array.length - 1].trim());
-//            System.out.println(getChar(name));
-//            int maxLength =0;
-//            int max=0;
-//            for (int j = 0; j < array.length; j++) {
-//                String tmp = array[j];
-//                if(tmp.length()>maxLength){
-//                    maxLength=tmp.length();
-//                    max=j;
-//                }
-////                System.out.println(tmp.trim());
-//            }
-//            System.out.println(array[max]);
-//            break;
-//            System.out.println(name.trim());
         }
         Map<String, Integer> sortMap = MapTest.sortByValueDescending(map);
         for (Map.Entry<String, Integer> entry : sortMap.entrySet()) {
@@ -107,51 +88,12 @@ public class WorkFileTest {
                 if(RegexTest.checkChar(tmp)){
                     continue;
                 }
-//                System.out.println(ma.group());
                 if (map.get(tmp) == null) {
                     map.put(tmp, 1);
                 } else {
                     map.put(tmp, map.get(tmp) + 1);
                 }
             }
-//            String s = "\\d+.\\d+|\\w+";
-//            Pattern pattern = Pattern.compile(s);
-//            Matcher ma = pattern.matcher(name);
-//
-//            while (ma.find()) {
-//                String tmp = ma.group().trim().toLowerCase();
-//                if (tmp.contains("k")) {
-//                    continue;
-//                }
-//                if (!"".equals(RegexTest.getNumber(tmp))) {
-//                    continue;
-//                }
-////                System.out.println(ma.group());
-//                if (map.get(tmp) == null) {
-//                    map.put(tmp, 1);
-//                } else {
-//                    map.put(tmp, map.get(tmp) + 1);
-//                }
-//            }
-//            System.out.println(name);
-//            String[] array = name.split("\\,");
-//            System.out.println(array.length);
-//            name = array[array.length - 1].trim();
-//            System.out.println(array[array.length - 1].trim());
-//            System.out.println(getChar(name));
-//            int maxLength =0;
-//            int max=0;
-//            for (int j = 0; j < array.length; j++) {
-//                String tmp = array[j];
-//                if(tmp.length()>maxLength){
-//                    maxLength=tmp.length();
-//                    max=j;
-//                }
-////                System.out.println(tmp.trim());
-//            }
-//            System.out.println(array[max]);
-//            break;
-//            System.out.println(name.trim());
         }
         Map<String, Integer> sortMap = MapTest.sortByValueDescending(map);
         for (Map.Entry<String, Integer> entry : sortMap.entrySet()) {
