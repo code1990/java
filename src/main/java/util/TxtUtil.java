@@ -52,6 +52,69 @@ public class TxtUtil {
         return resultList;
     }
 
+    public static List<String> readGBKTxt(String filePath) {
+        List<String> resultList = null;
+        FileInputStream fileInputStream = null;
+        BufferedReader bufferedReader = null;
+        try {
+            resultList = new ArrayList<String>();
+            File file = new File(filePath);
+            fileInputStream = new FileInputStream(file);
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream,"GB2312");
+            bufferedReader = new BufferedReader(inputStreamReader);
+            String str = "";
+
+            while ((str = bufferedReader.readLine()) != null) {
+//				if (null != str && !"".equals(str)) {
+                resultList.add(str);
+//				}
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                bufferedReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                fileInputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+        return resultList;
+    }
+    public static void writeGBKTxt(String filePath, String content) {
+        FileWriter fw = null;
+        try {
+            File file = new File(filePath);
+            if (!file.getParentFile().exists()) {
+                file.getParentFile().mkdirs();
+            }
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            FileOutputStream fos = new FileOutputStream(file);
+            OutputStreamWriter osw = new OutputStreamWriter(fos,"GB2312");
+            osw.write(content);
+//            fw = new FileWriter(file);
+//            fw.write(content);
+            osw.flush();
+            osw.close();
+            System.out.println("ok");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+//            try {
+//                fw.close();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+        }
+    }
     /**
      * 把内容写入文本文件
      *
