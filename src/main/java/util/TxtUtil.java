@@ -11,6 +11,14 @@ import java.util.*;
  */
 public class TxtUtil {
 
+    public static String readTxtStr(String filePath) {
+        StringBuilder sb = new StringBuilder();
+        List<String> list = readTxt(filePath);
+        for (int i = 0; i <list.size() ; i++) {
+            sb.append(list.get(i)+"\n");
+        }
+        return sb.toString();
+    }
     /**
      * 给定文件目录读取 获取所有的文件内容
      *

@@ -38,11 +38,14 @@ public class TestInfo {
 
     @Test
     public void getInfo111() {
-        String path = "C:\\Users\\xiala\\Desktop\\test\\txt\\";
+        String path = "C:\\Users\\xiala\\Desktop\\";
         Map<String, Integer> map = new HashMap<String, Integer>();
         Map<String, Integer> map2 = new HashMap<String, Integer>();
 //        map.put("",0);
         for (File file : new File(path).listFiles()) {
+            if(!file.getName().contains(".txt")){
+               continue;
+            }
             List<String> list = TxtUtil.readTxt(file.getAbsolutePath());
             String name = file.getName();
             for (int i = 1; i < list.size(); i++) {
@@ -96,7 +99,7 @@ public class TestInfo {
 
     @Test
     public void getInfo1() {
-        String path = "C:\\Users\\xiala\\Desktop\\123.txt";
+        String path = "C:\\Users\\xiala\\Desktop\\1.txt";
         List<String> list = TxtUtil.readTxt(path);
         List<String> legendData = new ArrayList<>();
         List<Series> seriesList = new ArrayList<>();

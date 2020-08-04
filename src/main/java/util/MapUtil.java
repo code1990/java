@@ -19,6 +19,11 @@ public class MapUtil {
         for (Map.Entry<K, V> entry : list) {
             result.put(entry.getKey(), entry.getValue());
         }
+        for(Map.Entry<K, V> entry : result.entrySet()){
+//            String mapKey = entry.getKey();
+//            String mapValue = entry.getValue();
+            System.out.println(entry.getKey()+":"+entry.getValue());
+        }
         return result;
     }
 
