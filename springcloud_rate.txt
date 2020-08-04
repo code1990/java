@@ -1,0 +1,19 @@
+名师讲坛——Java微服务架构实战（SpringBoot+SpringCloud+Docker+	0.0	0	
+Spring Cloud微服务实战	7.7	217	
+Spring Cloud与Docker微服务架构实战	6.2	95	
+Spring Cloud 微服务架构开发实战	5.4	22	
+Spring Cloud微服务：入门、实战与进阶	7.7	73	
+Spring Cloud与Docker微服务架构实战（第2版）	0.0	5	
+Spring Cloud Alibaba 微服务原理与实战	0.0	2	
+Spring Cloud微服务架构实战派	0.0	8	
+Spring Cloud微服务	0.0	5	
+Spring Cloud Data Flow	0.0	0	
+Spring Cloud与Docker高并发微服务架构设计实施	0.0	9	
+Spring Cloud微服务架构进阶	0.0	4	
+Spring Cloud微服务架构开发实战	6.5	13	
+Spring Cloud 微服务分布式架构开发实战	0.0	1	
+Spring Cloud实战演练	0.0	2	
+Spring Cloud	0.0	0	
+Spring Cloud微服务架构实战	0.0	3	
+Spring Cloud 微服务开发实战-微课视频版（清华科技大讲堂）	0.0	0	
+Spring Cloud微服务架构开发	0.0	0	

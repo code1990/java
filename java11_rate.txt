@@ -1,0 +1,23 @@
+Java 11 Cookbook - Second Edition	0.0	0	
+Java 11官方入门教程(第8版)	0.0	3	
+Java 11官方参考手册(第11版)	0.0	0	
+Mastering Java 11 - Second Edition	0.0	0	
+The Java Module System	0.0	1	
+Java Projects	0.0	0	
+Java核心技术·卷 I（原书第11版）	9.2	51	
+Java语言程序设计与数据结构(基础篇)(原书第11版)	8.9	16	
+Java Performance: In-Depth Advice for Tuning and Programming Java 8, 11, and Beyond	0.0	1	
+Java 1.1 Developer's Handbook	0.0	0	
+Java 1.1 Certification Exam Guide for Programmers and Developers	0.0	0	
+Mededeelingen Van Het Proefstation Voor de Java-Suikerindustrie Volume Deel.11 1921	0.0	1	
+Java核心技术·卷 II（原书第11版）	0.0	6	
+Core Java 2 V1 Fundamentals and V2 Advanced Features Pack WITH Core Java 2 Volume 11 Advanced Features AND Core Java 2 Volume 1 Fundamentals	0.0	0	
+Core Java Volume I--Fundamentals(11th Edition)	0.0	7	
+Java语言程序设计与数据结构(进阶篇)(原书第11版)	0.0	3	
+Java開発の実用問答集 現場力がアップする11の指南 特別版	0.0	0	
+Java SE11與Android 9.x程式設計範例教本	0.0	0	
+Java How to Program, Early Objects, Student Value Edition Plus MyLab Programming with Pearson eText -- Access Card Pacakge (11th Edition)	0.0	0	
+OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide	0.0	0	
+Java SE 11 Programmer I Certification Guide	0.0	0	
+Java核心技术 卷II：高级特性 第11版·英文版 上下册	0.0	0	
+Java核心技术 卷I 基础知识 第11版 英文版 上下册	0.0	4	

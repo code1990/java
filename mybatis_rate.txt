@@ -1,0 +1,25 @@
+MyBatis技术内幕	8.5	63	
+Spring Boot实战派	7.4	33	
+MyBatis从入门到精通	8.0	76	
+Java EE互联网轻量级框架整合开发	7.6	67	
+Java Persistence with MyBatis 3	7.8	49	
+深入浅出MyBatis技术原理与实战	5.4	71	
+Mybatis in Practice	0.0	1	
+Spring+MyBatis企业应用实战	7.4	35	
+Java Persistence with MyBatis 3	0.0	2	
+互联网轻量级SSM框架解密	0.0	7	
+Web应用开发——基于Spring MVC+MyBatis+Maven	0.0	0	
+MyBatis 3源码深度解析	0.0	5	
+JavaEE框架技术(SpringMVC+Spring+MyBatis高等学校应用型本科十三五规划教材)	0.0	0	
+Spring+MyBatis企业应用实战（第2版）	0.0	5	
+Spring MVC+MyBatis开发从入门到项目实战	0.0	8	
+Java EE框架整合开发入门到实战——Spring+Spring MVC+MyBatis（微课	0.0	0	
+Spring MVC + MyBatis快速开发与项目实战	0.0	1	
+Java EE Spring MVC与MyBatis企业开发实战	0.0	0	
+Struts2+Spring+Hibernate+MyBatis网站开发案例课堂	0.0	0	
+Java EE轻量级框架应用与开发——Spring+Spring MVC+MyBatis	0.0	0	
+Java EE实战精粹 MyBatis+Spring+Spring MVC	0.0	1	
+SSM开发实战教程（Spring+Spring MVC+MyBatis）	0.0	0	
+Spring MVC+MyBatis+Activiti工作流开发从入门到精通	0.0	0	
+轻量级Java Web企业应用实战――Spring MVC+Spring+MyBatis整合开发	0.0	0	
+Spring MVC+MyBatis开发从入门到项目实践（超值版）（软件开发魔典）	0.0	0	
