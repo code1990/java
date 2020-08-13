@@ -10,11 +10,9 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.junit.Test;
-import util.MapUtil;
-import util.RegexUtil;
-import util.TxtUtil;
-import util.UserAgentUtil;
+import util.*;
 
+import java.text.DecimalFormat;
 import java.util.*;
 
 /**
@@ -158,8 +156,9 @@ public class GnInfo {
 
     @Test
     public void getInfo000() throws Exception{
-        String url = "http://fund.eastmoney.com/f10/F10DataApi.aspx?type=lsjz&code=000083&page=1&per=65535&sdate=2019-03-01&edate=2019-04-1";
-        String code="000083";
+        String url = "http://fund.eastmoney.com/f10/F10DataApi" +
+                ".aspx?type=lsjz&code=007874&page=1&per=65535&sdate=2020-01-01&edate=2020-02-01";
+        String code="007874";
         HttpGet httpGet = new HttpGet(url);
         httpGet.setHeader("User-Agent", UserAgentUtil.getRandomAgent());
         HttpResponse response = httpClient.execute(httpGet);
@@ -180,8 +179,44 @@ public class GnInfo {
             list.add(str);
         }
         for (int i = 0; i <list.size() ; i++) {
+//            DecimalFormat df = new DecimalFormat("#.00");
             String[] array = list.get(i).split(" ");
-            System.out.print(new Double(array[1])*100+",");
+            System.out.println(array[0]+"\t"+array[1]);
+        }
+    }
+
+    @Test
+    public void getInfoBULL(){
+        String path ="C:\\Users\\admin\\Desktop\\BULL.txt";
+        List<String> list = TxtUtil.readTxt(path);
+        HashMap<String,String> map = new HashMap<>();
+
+//        for (int i = 0; i <list.size() ; i++) {
+//            String array = list.get(i).split("\t")[1];
+//        }
+        Collections.reverse(list);
+        for (int i = 1; i <=20 ; i++) {
+            double[] x = new double[i];
+            for (int j = 0; j <list.size() ; j++) {
+                String info = list.get(j).split("\t")[1];
+                if(j<x.length){
+                    x[j]=new Double(info);
+                }
+                if(x.length==j){
+                    break;
+                }
+            }
+//            System.out.println(Arrays.toString(x));
+//            System.out.println(MathUtil.getAvg(x));
+//            System.out.println(MathUtil.getStandardeviation(x));
+
+            for (int j = 0; j <100 ; j++) {
+                double avg =MathUtil.getAvg(x)+j*MathUtil.getStandardeviation(x);
+                if(avg>1.4168&& avg<1.4404){
+                    System.out.println(x.length+">>>>"+avg+">>>"+j);
+                }
+            }
+
         }
     }
 }

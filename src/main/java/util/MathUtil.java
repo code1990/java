@@ -36,4 +36,13 @@ public class MathUtil {
         //reture Math.sqrt(dVar/(m-1));
         return Math.sqrt(dVar/m);
     }
+
+    public static double  getAvg(double[] x) {
+        int m=x.length;
+        double sum=0;
+        for(int i=0;i<m;i++){//求和
+            sum+=x[i];
+        }
+        return sum/m;//求平均值
+    }
 }
