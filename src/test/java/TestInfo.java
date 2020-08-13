@@ -4,10 +4,12 @@ import com.alibaba.fastjson.JSONObject;
 import org.apdplat.word.WordSegmenter;
 import org.apdplat.word.segmentation.Word;
 import org.junit.Test;
+import util.JDBCUtil;
 import util.MapUtil;
 import util.TxtUtil;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 public class TestInfo {
@@ -345,4 +347,30 @@ public class TestInfo {
             System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());
         }
     }
+
+    @Test
+    public void getInfo123(){
+        for (int i = 1; i <32 ; i++) {
+            String str = ""+i;
+            if(i<10){
+                str = "0"+i;
+            }
+            System.out.println("### 2020-07-"+str+" 日报");
+        }
+    }
+
+    @Test
+    public void getInfo666(){
+        try {
+            new File("123.sql").createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        List<String> list = TxtUtil.readTxt("123.sql");
+        for (int i = 0; i <list.size() ; i++) {
+            System.out.println(list.get(i));
+        }
+
+    }
+
 }

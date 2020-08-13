@@ -19,6 +19,16 @@ public class TxtUtil {
         }
         return sb.toString();
     }
+
+    public static Map<String,String> readMap(String filePath){
+        Map<String, String> map = new HashMap<String, String>();
+        List<String> list = readTxt(filePath);
+        for (int i = 0; i < list.size(); i++) {
+            String[] array = list.get(i).split("\t");
+            map.put(array[0],array[1]);
+        }
+        return map;
+    }
     /**
      * 给定文件目录读取 获取所有的文件内容
      *
@@ -32,6 +42,41 @@ public class TxtUtil {
         try {
             resultList = new ArrayList<String>();
             File file = new File(filePath);
+            fileReader = new FileReader(file);
+            bufferedReader = new BufferedReader(fileReader);
+            String str = "";
+
+            while ((str = bufferedReader.readLine()) != null) {
+//				if (null != str && !"".equals(str)) {
+                resultList.add(str);
+//				}
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                bufferedReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                fileReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+        return resultList;
+    }
+
+    public static List<String> readTxt(File file) {
+        List<String> resultList = null;
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+        try {
+            resultList = new ArrayList<String>();
+//            File file = new File(filePath);
             fileReader = new FileReader(file);
             bufferedReader = new BufferedReader(fileReader);
             String str = "";
@@ -155,7 +200,24 @@ public class TxtUtil {
             }
         }
     }
-
+    public static void writeTxt(File file,String content) {
+        FileWriter fw = null;
+        try {
+            fw = new FileWriter(file);
+            fw.write(content);
+            fw.flush();
+            fw.close();
+            System.out.println("ok");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                fw.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     public static void writeTxt(File file, List<String> list) {
         FileWriter fw = null;
         try {

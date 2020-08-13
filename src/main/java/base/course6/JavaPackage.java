@@ -1,5 +1,5 @@
 package base.course6;
-import course3.JavaType;
+import base.course3.JavaType;
 
 public class JavaPackage {
 
@@ -11,7 +11,7 @@ public class JavaPackage {
 
         //如下所示 实例化对象的方式
         //不import 则需要写全名
-        course2.HelloWorld h = new course2.HelloWorld();
+        base.course2.HelloWorld h = new base.course2.HelloWorld();
 //        course3.HelloWorld h2 = new course3.HelloWorld();
 
         //import 则可以写简称 直呼其名
