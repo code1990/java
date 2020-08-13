@@ -4,10 +4,12 @@ import com.alibaba.fastjson.JSONObject;
 import org.apdplat.word.WordSegmenter;
 import org.apdplat.word.segmentation.Word;
 import org.junit.Test;
+import util.JDBCUtil;
 import util.MapUtil;
 import util.TxtUtil;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 public class TestInfo {
@@ -38,11 +40,14 @@ public class TestInfo {
 
     @Test
     public void getInfo111() {
-        String path = "C:\\Users\\xiala\\Desktop\\test\\txt\\";
+        String path = "C:\\Users\\xiala\\Desktop\\";
         Map<String, Integer> map = new HashMap<String, Integer>();
         Map<String, Integer> map2 = new HashMap<String, Integer>();
 //        map.put("",0);
         for (File file : new File(path).listFiles()) {
+            if(!file.getName().contains(".txt")){
+               continue;
+            }
             List<String> list = TxtUtil.readTxt(file.getAbsolutePath());
             String name = file.getName();
             for (int i = 1; i < list.size(); i++) {
@@ -96,7 +101,7 @@ public class TestInfo {
 
     @Test
     public void getInfo1() {
-        String path = "C:\\Users\\xiala\\Desktop\\123.txt";
+        String path = "C:\\Users\\xiala\\Desktop\\1.txt";
         List<String> list = TxtUtil.readTxt(path);
         List<String> legendData = new ArrayList<>();
         List<Series> seriesList = new ArrayList<>();
@@ -342,4 +347,30 @@ public class TestInfo {
             System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());
         }
     }
+
+    @Test
+    public void getInfo123(){
+        for (int i = 1; i <32 ; i++) {
+            String str = ""+i;
+            if(i<10){
+                str = "0"+i;
+            }
+            System.out.println("### 2020-07-"+str+" 日报");
+        }
+    }
+
+    @Test
+    public void getInfo666(){
+        try {
+            new File("123.sql").createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        List<String> list = TxtUtil.readTxt("123.sql");
+        for (int i = 0; i <list.size() ; i++) {
+            System.out.println(list.get(i));
+        }
+
+    }
+
 }

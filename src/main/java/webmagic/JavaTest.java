@@ -21,8 +21,8 @@ public class JavaTest  implements PageProcessor {
         Html html = page.getHtml();
         System.out.println(html.toString());
         Document document = html.getDocument();
-        Element element = document.getElementsByClass("t_fsz").first();
-        System.out.println(element.text());
+//        Element element = document.getElementsByClass("t_fsz").first();
+//        System.out.println(element.text());
 //        page.addTargetRequests(page.getHtml().links().regex("(https://github\\.com/[\\w\\-]+/[\\w\\-]+)").all());
 //        page.addTargetRequests(page.getHtml().links().regex("(https://github\\.com/[\\w\\-])").all());
 //        page.putField("author", page.getUrl().regex("https://github\\.com/(\\w+)/.*").toString());
@@ -46,6 +46,6 @@ public class JavaTest  implements PageProcessor {
 //            System.out.println(url);
 //
 //        }
-        Spider.create(new JavaTest()).addUrl("https://www.javaxxz.com/thread-397628-1-1.html").thread(5).run();
+        Spider.create(new JavaTest()).addUrl("http://fundf10.eastmoney.com/jbgk_005911.html").thread(5).run();
     }
 }
