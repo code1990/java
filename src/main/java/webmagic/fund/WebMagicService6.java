@@ -30,7 +30,7 @@ public class WebMagicService6 {
 
     public static void main(String[] args) throws Exception {
         HttpClient httpClient = HttpClients.createDefault();
-        for (int i = 3342; i < list.size(); i++) {
+        for (int i = 3342; i <1 ; i++) {//list.size()
             String code =list.get(i);//"000083"
             String url = "http://fund.eastmoney.com/f10/F10DataApi" +
                     ".aspx?type=lsjz&code="+code+"&page=1&per=65535&sdate=2020-07-18&edate=2020-08-18";
@@ -80,6 +80,9 @@ public class WebMagicService6 {
         }
 
     }
+
+
+
 
 
 }

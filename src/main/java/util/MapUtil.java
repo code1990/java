@@ -42,6 +42,26 @@ public class MapUtil {
         return result;
     }
 
+    public static <K, V extends Comparable<? super V>> String getBig(Map<K, V> map) {
+        StringBuilder sb = new StringBuilder();
+        List<Map.Entry<K, V>> list = new LinkedList<Map.Entry<K, V>>(map.entrySet());
+        Collections.sort(list, new Comparator<Map.Entry<K, V>>() {
+            @Override
+            public int compare(Map.Entry<K, V> o1, Map.Entry<K, V> o2) {
+                int compare = (o1.getValue()).compareTo(o2.getValue());
+                return -compare;
+            }
+        });
+        Map<K, V> result = new LinkedHashMap<K, V>();
+        for (Map.Entry<K, V> entry : list) {
+            result.put(entry.getKey(), entry.getValue());
+        }
+        for(Map.Entry<K, V> entry : result.entrySet()){
+            sb.append(entry.getKey()+":"+entry.getValue()+",");
+        }
+        return sb.toString();
+    }
+
     //升序排序
     public static <K, V extends Comparable<? super V>> Map<K, V> sortAsc(Map<K, V> map) {
         List<Map.Entry<K, V>> list = new LinkedList<Map.Entry<K, V>>(map.entrySet());

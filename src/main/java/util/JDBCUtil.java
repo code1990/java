@@ -15,6 +15,8 @@ import java.util.List;
  */
 public class JDBCUtil {
 
+    static ConnectionPool pool = new ConnectionPool();
+
     private static final String connectionURL =
             "jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=UTC";
     private static final String username = "root";
@@ -45,26 +47,74 @@ public class JDBCUtil {
         }
     }
 
-    public static void insertList(List<String> list) {
+    public static void insertList(List<String> list)  {
         Connection con = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
         try {
-            con = getConnection();
+            con = pool.getConnection();
             Statement st = con.createStatement();
             for (int i = 0; i < list.size(); i++) {
                 st.addBatch(list.get(i));
             }
             st.executeBatch();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                close(rs, stmt, con);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
+        pool.close(con);
+    }
+
+    /**
+     * @Title: updateTest
+     * @Description: PreparedStatement批量更新
+     * @return void    返回类型
+     */
+    public static void update(List<String> list) {
+        Connection con = null;
+        Statement stmt = null;
+        ResultSet rs = null;
+        try {
+            con = pool.getConnection();
+            stmt = con.createStatement();
+            con.setAutoCommit(false);
+            for (int i = 0; i < list.size(); i++) {
+                // 每200条执行一次，避免内存不够的情况
+                stmt.addBatch(list.get(i));
+                if (i > 0 && i % 200 == 0) {
+                    stmt.executeBatch();
+                }
+            }
+            // 最后执行剩余不足200条的
+            stmt.executeBatch();
+            // 执行完后，手动提交事务
+            con.commit();
+            // 在把自动提交打开
+            con.setAutoCommit(true);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        pool.close(con);
+    }
+
+    public static void update(String sql) {
+        Connection con = null;
+        Statement stmt = null;
+        ResultSet rs = null;
+        try {
+            con = pool.getConnection();
+            stmt = con.createStatement();
+            con.setAutoCommit(false);
+            stmt.addBatch(sql);
+            // 最后执行剩余不足200条的
+            stmt.executeBatch();
+            // 执行完后，手动提交事务
+            con.commit();
+            // 在把自动提交打开
+            con.setAutoCommit(true);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        pool.close(con);
     }
 
     public static void getResult(String sql) {
@@ -73,7 +123,7 @@ public class JDBCUtil {
         ResultSet rs = null;
         try {
             //建立连接
-            con = getConnection();
+            con = pool.getConnection();
             StringBuilder sb1 = new StringBuilder();
 
             stmt = con.prepareStatement(sql);
@@ -82,33 +132,26 @@ public class JDBCUtil {
             ResultSetMetaData md = rs.getMetaData();
             int columnSize = md.getColumnCount();
 
-            System.out.println("查询结果如下:");
-            //打印字段名
-            StringBuilder sb2= new StringBuilder();
-            for (int i = 1; i <= columnSize; i++) {
-                System.out.printf("%-12s", md.getColumnName(i));
-//                sb2.append(md.getColumnName(i)+"\t");
-            }
+//            System.out.println("查询结果如下:");
+//            //打印字段名
+//            StringBuilder sb2= new StringBuilder();
+//            for (int i = 1; i <= columnSize; i++) {
+//                System.out.printf("%-12s", md.getColumnName(i));
+////                sb2.append(md.getColumnName(i)+"\t");
+//            }
 //            sb1.append(sb2.toString()+"\n");
             while (rs.next()) {
                 StringBuilder sb3= new StringBuilder();
                 for (int i = 1; i <= columnSize; i++) {
-                    System.out.printf("%-12s", rs.getObject(i));
+//                    System.out.printf("%-12s", rs.getObject(i));
                     sb3.append(rs.getObject(i)+"\t");
                 }
                 sb1.append(sb3.toString()+"\n");
             }
-            TxtUtil.writeTxt("C:\\Users\\xiala\\Desktop\\123\\1233.txt", sb1.toString());
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                close(rs, stmt, con);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
-
+        pool.close(con);
     }
 
     public static List<String[]> getResultList(String sql) {
@@ -118,7 +161,7 @@ public class JDBCUtil {
         List<String[]> list = new ArrayList<>();
         try {
             //建立连接
-            con = getConnection();
+            con = pool.getConnection();
             StringBuilder sb1 = new StringBuilder();
 
             stmt = con.prepareStatement(sql);
@@ -127,13 +170,13 @@ public class JDBCUtil {
             ResultSetMetaData md = rs.getMetaData();
             int columnSize = md.getColumnCount();
 
-            System.out.println("查询结果如下:");
+//            System.out.println("查询结果如下:");
             //打印字段名
-            StringBuilder sb2= new StringBuilder();
-            for (int i = 1; i <= columnSize; i++) {
-                System.out.printf("%-12s", md.getColumnName(i));
-//                sb2.append(md.getColumnName(i)+"\t");
-            }
+//            StringBuilder sb2= new StringBuilder();
+//            for (int i = 1; i <= columnSize; i++) {
+////                System.out.printf("%-12s", md.getColumnName(i));
+////                sb2.append(md.getColumnName(i)+"\t");
+//            }
 //            sb1.append(sb2.toString()+"\n");
 
             while (rs.next()) {
@@ -154,39 +197,40 @@ public class JDBCUtil {
                 sb1.append(sb3.toString()+"\n");
             }
 
-            TxtUtil.writeTxt("C:\\Users\\xiala\\Desktop\\123\\1233.txt", sb1.toString());
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                close(rs, stmt, con);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
+        pool.close(con);
         return list;
     }
 
-    @Test
-    public void getInfo(){
-        String sql = "select * from t_fund_cc_mx;";
-        List<String[]> list = getResultList(sql);
-        sql = "select * from t_com_hy_gn_mx;";
-        List<String[]> list2 = getResultList(sql);
-//        for (int i = 0; i < list.size(); i++) {
-//            String ccName = list.get(i)[2];
-////            System.out.println(ccName);
-//            int count =0;
-//            String[] array = "立讯精密、歌尔股份、卓胜微、信维通信、兆易创新、圣邦股份、三安光电、京东方A、TCL科技".split("、");
-//            for (int j = 0; j <array.length ; j++) {
-//                if(ccName.contains(array[j])){
-//                    count+=1;
-//                }
-//            }
-//            System.out.println(list.get(i)[1]+"\t"+count);
-//        }
-        for (int i = 0; i < list2.size(); i++) {
-            System.out.println(Arrays.toString(list2.get(i)));
+    public static List<String> getList(String sql) {
+        Connection con = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        List<String> list = new ArrayList<>();
+        try {
+            //建立连接
+            con = pool.getConnection();
+            StringBuilder sb1 = new StringBuilder();
+
+            stmt = con.prepareStatement(sql);
+            rs = stmt.executeQuery();
+            //获取列数
+            ResultSetMetaData md = rs.getMetaData();
+            int columnSize = md.getColumnCount();
+            while (rs.next()) {
+                if(rs.getObject(1)==null){
+                    return list;
+                }
+                list.add(rs.getObject(1).toString());
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+        pool.close(con);
+        return list;
     }
+
 }

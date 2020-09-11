@@ -26,8 +26,8 @@ public class TestClass {
         //  chromedriver.exe要与当前使用的谷歌浏览器版本一一对应，下载的地址可在淘宝或者GitHub，并将其解压放在与谷歌
         //  .exe 文件同级下
 //        File file = new File("C:\\driver\\chromedriver83.exe");
-        System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver84.exe");
-        System.setProperty("webdriver.chrome.bin", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver85.exe");
+//        System.setProperty("webdriver.chrome.bin", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
 
     }
     public static void main(String[] args) {

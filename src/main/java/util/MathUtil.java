@@ -1,5 +1,10 @@
 package util;
 
+import java.text.Collator;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
 /**
  * @author 911
  * @date 2020-08-11 15:27
@@ -44,5 +49,45 @@ public class MathUtil {
             sum+=x[i];
         }
         return sum/m;//求平均值
+    }
+
+    public static String getRound(double x,int index){
+        StringBuilder sb = new StringBuilder("#.");
+        for (int i = 0; i < index; i++) {
+            sb.append("0");
+        }
+        String result =new java.text.DecimalFormat(sb.toString()).format(x);
+        if(result.startsWith(".")){
+            return "0"+result;
+        }else if(result.startsWith("-.")){
+            return result.replace("-.","-0.");
+        }
+        return result;
+    }
+    public static String getRound4(double x){
+        String result =new java.text.DecimalFormat("#.0000").format(x);
+        if(result.startsWith(".")){
+            return "0"+result;
+        }else if(result.startsWith("-.")){
+            return result.replace("-.","-0.");
+        }
+        return result;
+    }
+
+    public static String getSum(List<String> list){
+        double result =0.0;
+        for (int i = 0; i < list.size(); i++) {
+            result +=new Double(list.get(i));
+        }
+        return getRound4(result);
+    }
+
+    public static void sortByWord(List<String> list){
+        Comparator comparator = Collator.getInstance(java.util.Locale.CHINA);
+        Object[] array1 = list.toArray();
+        Arrays.sort(array1, comparator);
+        for (int i = 0; i <array1.length ; i++) {
+            System.out.println(array1[i].toString());
+        }
     }
 }

@@ -24,7 +24,7 @@ import java.util.regex.Pattern;
  * 1.2.3我国信息化发展的主要任务和发展重点 22
  */
 public class CreateMdNew {
-    private String admin = System.getProperty("user.name");
+    private String admin = "xiala";//System.getProperty("user.name");
     Map<String, String> map = new HashMap<>();
     String path = "C:\\Users\\" + admin + "\\Desktop\\124.txt";
     List<String> list = TxtUtil.readTxt(path);

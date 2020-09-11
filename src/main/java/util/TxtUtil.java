@@ -193,11 +193,11 @@ public class TxtUtil {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            try {
-                fw.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                fw.close();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
         }
     }
     public static void writeTxt(File file,String content) {
@@ -388,5 +388,13 @@ public class TxtUtil {
             list.add(f.getAbsolutePath());
         }
         return list;
+    }
+
+    public static void writeTxt(String s, List<String> resultList) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i <resultList.size() ; i++) {
+            sb.append(resultList.get(i)+"\n");
+        }
+        TxtUtil.writeTxt(s,sb.toString());
     }
 }
