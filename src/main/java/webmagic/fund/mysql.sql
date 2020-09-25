@@ -103,3 +103,7 @@ insert into t_s_001(s_date,s_close,s_open,s_high,s_low,s_m,s_percent,s_type)valu
 insert into t_s_001(s_date,s_close,s_open,s_high,s_low,s_m,s_percent,s_type)values(STR_TO_DATE('2020-09-11', '%Y-%m-%d'),12942.95,12711.09,12952.47,12702.62,128.249,1.57,'sz_001');
 insert into t_s_001(s_date,s_close,s_open,s_high,s_low,s_m,s_percent,s_type)values(STR_TO_DATE('2020-09-11', '%Y-%m-%d'),24503.31,24352.63,24572.66,24293.03,0,0.78,'hk_001');
 insert into t_s_001(s_date,s_close,s_open,s_high,s_low,s_m,s_percent,s_type)values(STR_TO_DATE('2020-09-11', '%Y-%m-%d'),11087.40,11251.19,11280.41,10945.22,221.514,-0.60,'us_001');
+
+
+ALTER TABLE t_s_001 ADD COLUMN `fund_bull_4` double NOT NULL DEFAULT '0.0';
+ALTER TABLE t_s_001 ADD COLUMN `fund_bull_5` double NOT NULL DEFAULT '0.0';

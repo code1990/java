@@ -1,5 +1,6 @@
 package selenium;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -44,5 +45,7 @@ public class TestClass {
         driver.get("https://www.baidu.com");
 
         System.out.println(driver.getTitle());
+        System.out.println(driver.findElement(By.tagName("body")).getAttribute("innerHTML"));
+        driver.quit();
     }
 }

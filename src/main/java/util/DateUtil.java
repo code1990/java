@@ -12,6 +12,7 @@ import java.util.*;
  * @date 2020-08-08 15:31
  */
 public class DateUtil {
+    private final static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
     public static void main(String[] args) {
 
@@ -30,7 +31,6 @@ public class DateUtil {
 
     @Test
     public void getInfo() {
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         // 当前日期
         Calendar instance = Calendar.getInstance();
         // 调整到上周
@@ -46,7 +46,6 @@ public class DateUtil {
 
     @Test
     public void getInfo2() {
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         // 当前日期
         Calendar instance = Calendar.getInstance();
         for (int i = 1; i < 100; i++) {
@@ -107,7 +106,7 @@ public class DateUtil {
 
     public static String convertDate(String dateStr) {
         try {
-            return new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("yyyy年MM月dd日").parse(dateStr));
+            return format.format(new SimpleDateFormat("yyyy年MM月dd日").parse(dateStr));
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -116,7 +115,7 @@ public class DateUtil {
 
     public static String convertDate2(String dateStr) {
         try {
-            return new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("yyyy/MM/dd").parse(dateStr));
+            return format.format(new SimpleDateFormat("yyyy/MM/dd").parse(dateStr));
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -124,13 +123,12 @@ public class DateUtil {
     }
 
     public static String getYesterday() {
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date();
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
         calendar.add(Calendar.DAY_OF_MONTH, -1);
         date = (Date) calendar.getTime();
-        return df.format(date);
+        return format.format(date);
     }
 
     public static int getWeekOfYear(String today) {
@@ -148,11 +146,9 @@ public class DateUtil {
     }
 
     public static int getWeek(String dates) {
-
-        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
         Date d = null;
         try {
-            d = f.parse(dates);
+            d = format.parse(dates);
         } catch (ParseException e) {
 
             e.printStackTrace();
@@ -166,16 +162,28 @@ public class DateUtil {
         return w;
     }
 
-    public static int getYear(String dates){
-        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
+    public static int getYear(String dates) {
         Date d = null;
         try {
-            d = f.parse(dates);
+            d = format.parse(dates);
         } catch (ParseException e) {
             e.printStackTrace();
         }
         Calendar cal = Calendar.getInstance();
         cal.setTime(d);
         return cal.get(Calendar.YEAR);
+    }
+
+    public static String getLastFriday() {
+        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
+        Date today = new Date();
+        Calendar c = Calendar.getInstance();
+        c.setTime(today);
+        int weekday = c.get(Calendar.DAY_OF_WEEK);
+        if (weekday == 2) {
+            c.add(Calendar.DAY_OF_MONTH, -3);
+            return f.format(c.getTime());
+        }
+        return "";
     }
 }

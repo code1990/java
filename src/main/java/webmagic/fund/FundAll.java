@@ -122,4 +122,17 @@ public class FundAll {
 //        System.out.println(jsonArray.toJSONString());
 //        System.out.println(str);
     }
+
+    @Test
+    public void getInfo11111(){
+//        StringBuilder sb = new StringBuilder("sz\t");
+//        for (int i = 1900001; i <= 1900116; i++) {
+//            System.out.println(i);
+//            sb.append(i+".txt"+"\t");
+//        }
+//        TxtUtil.writeTxt("C:\\Users\\xiala\\Desktop\\d_191.sh",sb.toString());
+        for (int i = 2; i <=191 ; i++) {
+            System.out.println("sh d_"+i+".sh");
+        }
+    }
 }

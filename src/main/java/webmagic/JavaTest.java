@@ -188,4 +188,37 @@ public class JavaTest  implements PageProcessor {
         }
         TxtUtil.writeTxt("C:\\Users\\xiala\\Desktop\\123\\000.txt",sb.toString());
     }
+
+    @Test
+    public void getLength(){
+        String path = "D:\\workspaceE1\\client-new\\com.csair.soc.disp.monitor.ui\\src\\com\\csair\\soc\\disp\\monitor\\newui\\dialog";
+        File[] file = new File(path).listFiles();
+        for (int i = 0; i <file.length ; i++) {
+            if(file[i].isDirectory()){
+                File[] file2 = file[i].listFiles();
+                for (int j = 0; j <file2.length ; j++) {
+                    String name = file2[j].getName();
+//                    if(!name.contains("Dialog")){
+//                        continue;
+//                    }
+                    System.out.println(name);
+                }
+            }else{
+                System.out.println(file[i].getName());
+            }
+
+
+        }
+    }
+
+    @Test
+    public void get00(){
+        List<String> list = TxtUtil.readTxt("C:\\Users\\xiala\\Desktop\\112.txt");
+        for (int i = 0; i <list.size() ; i++) {
+//            if(list.get(i).contains("2021考研")){
+//                continue;
+//            }
+            System.out.println("http://dict.cn/"+list.get(i));
+        }
+    }
 }

@@ -20,7 +20,7 @@ public class Fund008UpdateGnMx {
         updateGnSum();
     }
 
-    @Test
+//    @Test
     public void updateGnMx(){
         String sql ="select id,count,gn_name from t_fund_gn2_info order by id;";
         List<String[]> list = JDBCUtil.getResultList(sql);
@@ -55,7 +55,7 @@ public class Fund008UpdateGnMx {
         }
     }
 
-    @Test
+//    @Test
     public void updateGnSum(){
         String sql ="select id from t_fund_gn2_info order by id;";
         List<String[]> list = JDBCUtil.getResultList(sql);
@@ -90,7 +90,7 @@ public class Fund008UpdateGnMx {
         }
     }
 
-    @Test
+//    @Test
     public void getInfo(){
         List<String[]> list = JDBCUtil.getResultList("select id,gn_name from t_fund_gn2_info");
         Map<Integer,String> map = new LinkedHashMap<>();
