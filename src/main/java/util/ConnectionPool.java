@@ -21,10 +21,23 @@ public class ConnectionPool implements DataSource {
     private LinkedList<Connection> pool = new LinkedList<Connection>();
 
     public ConnectionPool() {
-        // 一次性创建10个连接
-        for (int i = 0; i < 10; i++) {
+         //一次性创建10个连接
+//        for (int i = 0; i < 10; i++) {
+//            try {
+//                Connection conn = JDBCUtil.getConnection();
+//                // 将连接加入连接池中
+//                pool.add(conn);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+    }
+
+    public ConnectionPool(String db) {
+        //一次性创建10个连接
+        for (int i = 0; i < 1000; i++) {
             try {
-                Connection conn = JDBCUtil.getConnection();
+                Connection conn = JDBCUtil.getConnection(db);
                 // 将连接加入连接池中
                 pool.add(conn);
             } catch (Exception e) {

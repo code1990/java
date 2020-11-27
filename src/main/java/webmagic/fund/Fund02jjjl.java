@@ -2,7 +2,6 @@ package webmagic.fund;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.junit.Test;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.Spider;
@@ -96,5 +95,7 @@ public class Fund02jjjl  implements PageProcessor,Runnable {
 //        }
 //        TxtUtil.writeTxt("C:\\Users\\xiala\\Desktop\\123\\jjjl.txt",sb.toString());
 //    }
+
+
 }
 

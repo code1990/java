@@ -42,6 +42,23 @@ public class MapUtil {
         return result;
     }
 
+    //降序排序
+    public static <K, V extends Comparable<? super V>> String sortDescInfo(Map<K, V> map) {
+        List<Map.Entry<K, V>> list = new LinkedList<Map.Entry<K, V>>(map.entrySet());
+        Collections.sort(list, new Comparator<Map.Entry<K, V>>() {
+            @Override
+            public int compare(Map.Entry<K, V> o1, Map.Entry<K, V> o2) {
+                int compare = (o1.getValue()).compareTo(o2.getValue());
+                return -compare;
+            }
+        });
+        StringBuilder sb = new StringBuilder();
+        for (Map.Entry<K, V> entry : list) {
+            sb.append(entry.getKey()+"\t"+entry.getValue()+"\n");
+        }
+        return sb.toString();
+    }
+
     public static <K, V extends Comparable<? super V>> String getBig(Map<K, V> map) {
         StringBuilder sb = new StringBuilder();
         List<Map.Entry<K, V>> list = new LinkedList<Map.Entry<K, V>>(map.entrySet());

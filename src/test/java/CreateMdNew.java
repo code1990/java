@@ -2,8 +2,9 @@ import org.junit.Test;
 import util.TxtUtil;
 
 import java.io.File;
-import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,6 +23,16 @@ import java.util.regex.Pattern;
  * 1.2.1国家信息化战略目标 20
  * 1.2.2信息化的指导思想和基本原则 21
  * 1.2.3我国信息化发展的主要任务和发展重点 22
+ *
+ * 4. 输入以下命令，即可自动生成目录。
+pandoc -s --toc --toc-depth=4 FAQ.md -o FAQ.md
+
+注：pandoc 默认生成三级目录。以上述命令为例，如果使用如下命令则只会生成三级目录：
+pandoc -s --toc FAQ.md -o FAQ.md
+
+而我想让 FAQ.md 这篇文档生成四级目录，所以加了个参数 --toc-depth，并将其值设置为 4。大家可根据具体需求进行设置。
+
+
  */
 public class CreateMdNew {
     private String admin = "xiala";//System.getProperty("user.name");

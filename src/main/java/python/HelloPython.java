@@ -5,11 +5,7 @@ import org.python.core.PyInteger;
 import org.python.core.PyObject;
 import org.python.util.PythonInterpreter;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.file.Files;
+import java.io.*;
 import java.util.Properties;
 
 /**
@@ -27,17 +23,51 @@ public class HelloPython {
         initJavaPythonEnvironment();
         /*使用本地的方式直接调用Python代码*/
         invokePythonMethodDirect();
+        initJavaPythonEnvironment();
         /*使用文件的方式调用*/
+        initJavaPythonEnvironment();
         invokePythonMethodFile();
         /*使用命令行窗口方式调用 推荐*/
         invokePythonMethodByRuntime();
         /*传递参数*/
-        invokePythonMethodByRuntimeParam(1,2);
+//        invokePythonMethodByRuntimeParam(1,2);
+
+        PythonInterpreter interpreter = new PythonInterpreter();
+
+//执行Python语句
+
+        interpreter.exec("import sys");
+
+        interpreter.exec("print 'hello'");
+
+        interpreter.exec("print 2**100");
+
+//        PythonInterpreter interpreter = new PythonInterpreter();
+
+//执行Python脚本文件
+
+//        try {
+//
+////            BufferedReader reader = new BufferedReader(new InputStreamReader(
+////                    new FileOutputStream("D:\\gitee\\client\\tushare\\api\\ts01.py"), "utf-8"));
+//            InputStream  reader = new BufferedInputStream(new BufferedInputStreamRe(
+//                    new FileInputStream("D:\\gitee\\client\\tushare\\api\\ts01.py"), "utf-8"));
+//            InputStream filepy = reader;
+//
+//            interpreter.execfile(filepy);
+//
+//            filepy.close();
+//
+//        } catch (Exception e) {
+//
+//            e.printStackTrace();
+//
+//        }
     }
 
     public static void initJavaPythonEnvironment() {
         Properties props = new Properties();
-        props.put("python.home", "path to the Lib folder");
+        props.put("python.home", "D:\\sdk\\Python36");
         // Used to prevent: console: Failed to install '': java.nio.charset.UnsupportedCharsetException: cp0.
         props.put("python.console.encoding", "UTF-8");
         //don't respect java accessibility, so that we can access protected members on subclasses
@@ -59,7 +89,7 @@ public class HelloPython {
 
     public static void invokePythonMethodFile() {
         PythonInterpreter interpreter = new PythonInterpreter();
-        interpreter.execfile("E:\\tmp\\tmp\\bootPython\\src\\main\\python\\add.py");
+        interpreter.execfile("D:\\github\\java\\src\\main\\java\\python\\add.py");
         PyFunction pyFunction = interpreter.get("add", PyFunction.class);
         int a = 5;
         int b = 6;
@@ -70,7 +100,7 @@ public class HelloPython {
     public static void invokePythonMethodByRuntime() {
         Process process;
         try {
-            process = Runtime.getRuntime().exec("python E:\\tmp\\tmp\\bootPython\\src\\main\\python\\num.py");
+            process = Runtime.getRuntime().exec("D:\\sdk\\Python36\\python.exe D:\\gitee\\client\\tushare\\api\\ts01.py");
             BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line = null;
             while ((line = in.readLine()) != null) {
@@ -93,7 +123,7 @@ public class HelloPython {
             String.valueOf(a),String.valueOf(b)};
             process = Runtime.getRuntime().exec(args);
             BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String line = null;
+            String line = "";
             while ((line = in.readLine()) != null) {
                 System.out.println(line);
             }

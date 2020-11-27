@@ -11,14 +11,22 @@ import org.jsoup.select.Elements;
 import org.junit.Test;
 import util.*;
 
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author 911
  * @date 2020-08-27 09:54
  */
 public class Stock100 {
+
+//    @Test
+//    public void getBull(){
+//        getBull3();
+//        getBull2();
+//    }
 
     @Test
     public void getInfo() throws Exception {

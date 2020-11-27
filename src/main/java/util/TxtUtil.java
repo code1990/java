@@ -14,21 +14,22 @@ public class TxtUtil {
     public static String readTxtStr(String filePath) {
         StringBuilder sb = new StringBuilder();
         List<String> list = readTxt(filePath);
-        for (int i = 0; i <list.size() ; i++) {
-            sb.append(list.get(i)+"\n");
+        for (int i = 0; i < list.size(); i++) {
+            sb.append(list.get(i) + "\n");
         }
         return sb.toString();
     }
 
-    public static Map<String,String> readMap(String filePath){
+    public static Map<String, String> readMap(String filePath) {
         Map<String, String> map = new HashMap<String, String>();
         List<String> list = readTxt(filePath);
         for (int i = 0; i < list.size(); i++) {
             String[] array = list.get(i).split("\t");
-            map.put(array[0],array[1]);
+            map.put(array[0], array[1]);
         }
         return map;
     }
+
     /**
      * 给定文件目录读取 获取所有的文件内容
      *
@@ -105,6 +106,37 @@ public class TxtUtil {
         return resultList;
     }
 
+    public static String readTxtStr(File file) {
+        StringBuilder sb = new StringBuilder();
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+        try {
+            fileReader = new FileReader(file);
+            bufferedReader = new BufferedReader(fileReader);
+            String str = "";
+
+            while ((str = bufferedReader.readLine()) != null) {
+                sb.append(str + "\n");
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                bufferedReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                fileReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+        return sb.toString();
+    }
+
     public static List<String> readGBKTxt(String filePath) {
         List<String> resultList = null;
         FileInputStream fileInputStream = null;
@@ -113,7 +145,7 @@ public class TxtUtil {
             resultList = new ArrayList<String>();
             File file = new File(filePath);
             fileInputStream = new FileInputStream(file);
-            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream,"GB2312");
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, "GB2312");
             bufferedReader = new BufferedReader(inputStreamReader);
             String str = "";
 
@@ -140,6 +172,7 @@ public class TxtUtil {
         }
         return resultList;
     }
+
     public static void writeGBKTxt(String filePath, String content) {
         FileWriter fw = null;
         try {
@@ -151,7 +184,7 @@ public class TxtUtil {
                 file.createNewFile();
             }
             FileOutputStream fos = new FileOutputStream(file);
-            OutputStreamWriter osw = new OutputStreamWriter(fos,"GB2312");
+            OutputStreamWriter osw = new OutputStreamWriter(fos, "GB2312");
             osw.write(content);
 //            fw = new FileWriter(file);
 //            fw.write(content);
@@ -168,6 +201,7 @@ public class TxtUtil {
 //            }
         }
     }
+
     /**
      * 把内容写入文本文件
      *
@@ -200,7 +234,8 @@ public class TxtUtil {
 //            }
         }
     }
-    public static void writeTxt(File file,String content) {
+
+    public static void writeTxt(File file, String content) {
         FileWriter fw = null;
         try {
             fw = new FileWriter(file);
@@ -218,6 +253,7 @@ public class TxtUtil {
             }
         }
     }
+
     public static void writeTxt(File file, List<String> list) {
         FileWriter fw = null;
         try {
@@ -392,9 +428,73 @@ public class TxtUtil {
 
     public static void writeTxt(String s, List<String> resultList) {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i <resultList.size() ; i++) {
-            sb.append(resultList.get(i)+"\n");
+        for (int i = 0; i < resultList.size(); i++) {
+            sb.append(resultList.get(i) + "\n");
         }
-        TxtUtil.writeTxt(s,sb.toString());
+        TxtUtil.writeTxt(s, sb.toString());
     }
+
+    public static void appendFile(String path, String content) {
+        FileWriter fw = null;
+        try {
+            //如果文件存在，则追加内容；如果文件不存在，则创建文件
+            File f = new File(path);
+            fw = new FileWriter(f, true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        PrintWriter pw = new PrintWriter(fw);
+        pw.println(content);
+        pw.flush();
+        try {
+            fw.flush();
+            pw.close();
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void copyFile(String srcPath, String targetPath) {
+        File af = new File(srcPath);
+        File bf = new File(targetPath);
+        FileInputStream is = null;
+        FileOutputStream os = null;
+        if (!bf.exists()) {
+            try {
+                bf.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        try {
+            is = new FileInputStream(af);
+            os = new FileOutputStream(bf);
+            byte b[] = new byte[1024];
+            int len;
+            try {
+                len = is.read(b);
+                while (len != -1) {
+                    os.write(b, 0, len);
+                    len = is.read(b);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (is != null) {
+                    is.close();
+                }
+                if (os != null) {
+                    os.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 }

@@ -1,4 +1,3 @@
-import jnr.ffi.annotations.In;
 import org.apdplat.word.segmentation.Word;
 import org.junit.Test;
 import util.TxtUtil;

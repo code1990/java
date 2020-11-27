@@ -1,0 +1,30 @@
+N:=20;
+
+MID:=MA(C,N);
+
+VART1:=POW((C-MID),2);
+
+VART2:=MA(VART1,N);
+
+VART3:=SQRT(VART2);
+
+UPPER:=MID+2*VART3;
+
+LOWER:=MID-2*VART3;
+
+BOLL:REF(MID,1),COLORFFFFFF;
+
+UB:REF(UPPER,1),COLOR00FFFF;
+
+LB:REF(LOWER,1),COLORFF00FF;
+
+  布林极限（BB）=（收盘价-布林线下轨价格）/（布林线上轨价格-布林线下轨价格）
+  极限宽（WIDTH）=（布林上限值-布林下限值）/布林股价平均值
+
+ REF
+  表示bai今日以前的数据，例如：du ref(c,1)表示zhi昨天的dao收盘价, ref(v,1)表示昨天的专成交量，
+  同理属：ref(v,2)就表示前天的成交量，ref(v,3)是大前天的成交量....ref(v,10)就是10日前的成交量
+
+jupyter-lab
+
+  jupyter notebook

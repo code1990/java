@@ -1,0 +1,2 @@
+获取上证指数的历史数据api接口
+http://push2his.eastmoney.com/api/qt/stock/kline/get?cb=jQuery112408910454438758645_1606099316169&secid=1.000001&ut=fa5fd1943c7b386f172d6893dbfba10b&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58&klt=101&fqt=0&beg=19900101&end=20220101&_=1606099316213

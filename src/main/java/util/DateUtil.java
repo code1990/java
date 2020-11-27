@@ -2,7 +2,6 @@ package util;
 
 import org.junit.Test;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -185,5 +184,53 @@ public class DateUtil {
             return f.format(c.getTime());
         }
         return "";
+    }
+
+    public static String getMoth() {
+        return "";
+    }
+
+    public static String getMoth(int month) {
+
+        // 获取当前时间
+        Date date = new Date(System.currentTimeMillis());
+        Calendar calendar = Calendar.getInstance(); //得到日历
+        calendar.setTime(date);//把当前时间赋给日历
+        calendar.add(Calendar.MONTH, month); //设置为前2月，可根据需求进行修改
+        date = calendar.getTime();//获取2个月前的时间
+
+        return format.format(date);
+    }
+
+    public static String getCurrentStr() {
+        Date date = new Date(System.currentTimeMillis());
+        return format.format(date);
+    }
+
+    public static String get20Date() {
+        Calendar calendar = Calendar.getInstance();
+        int count =0;
+        String startDate = "";
+        String endDate = "";
+        for (int i = 1; i <= 50; i++) {
+            Date date = new Date();
+            calendar.setTime(date);
+            calendar.add(Calendar.DAY_OF_MONTH, -i);
+            date = calendar.getTime();
+            int index = calendar.get(Calendar.DAY_OF_WEEK) - 1;
+
+            if (0 == index || 6 == index) {
+                continue;
+            }
+            count++;
+            if(count==1){
+                endDate=format.format(date);
+            }
+            if(count==20){
+                startDate=format.format(date);
+                break;
+            }
+        }
+        return startDate+"\t"+endDate;
     }
 }

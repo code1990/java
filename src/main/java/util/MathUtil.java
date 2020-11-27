@@ -4,6 +4,7 @@ import java.text.Collator;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
 
 /**
  * @author 911
@@ -51,6 +52,24 @@ public class MathUtil {
         return sum/m;//求平均值
     }
 
+    public static double  getAvg(List<Double> x) {
+        int m=x.size();
+        double sum=0;
+        for(int i=0;i<m;i++){//求和
+            sum+=x.get(i);
+        }
+        return sum/m;//求平均值
+    }
+
+    public static double  getAvg(List<Double> x,int index) {
+        int m=index;
+        double sum=0;
+        for(int i=0;i<index;i++){//求和
+            sum+=x.get(i);
+        }
+        return sum/index;//求平均值
+    }
+
     public static String getRound(double x,int index){
         StringBuilder sb = new StringBuilder("#.");
         for (int i = 0; i < index; i++) {
@@ -64,6 +83,20 @@ public class MathUtil {
         }
         return result;
     }
+    public static double getRound2(double x,int index){
+        StringBuilder sb = new StringBuilder("#.");
+        for (int i = 0; i < index; i++) {
+            sb.append("0");
+        }
+        String result =new java.text.DecimalFormat(sb.toString()).format(x);
+        if(result.startsWith(".")){
+            return new Double("0"+result);
+        }else if(result.startsWith("-.")){
+            return new Double(result.replace("-.","-0."));
+        }
+        return new Double(result);
+    }
+
     public static String getRound4(double x){
         String result =new java.text.DecimalFormat("#.0000").format(x);
         if(result.startsWith(".")){
@@ -89,5 +122,14 @@ public class MathUtil {
         for (int i = 0; i <array1.length ; i++) {
             System.out.println(array1[i].toString());
         }
+    }
+
+    public static String getRandom(int length){
+        String val = "";
+        Random random = new Random();
+        for (int i = 0; i < length; i++) {
+            val += String.valueOf(random.nextInt(10));
+        }
+        return val;
     }
 }

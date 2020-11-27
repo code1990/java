@@ -1,0 +1,78 @@
+
+Images类使用介绍：
+There are two primary ways to use Images.
+1：直接调用
+      Image i = new Image(device, "C:\\graphic.bmp");
+      //device有2种设备，Display和Printer，写null，默认使用当前的Display来做显示设备。
+2：控制颜色分配
+    ImageData data = new ImageData("C:\\graphic.bmp");
+    RGB[] rgbs = data.getRGBs();
+    // At this point, rgbs contains specifications of all
+    // the colors contained within this image. You may
+    // allocate as many of these colors as you wish by
+    // using the Color constructor Color(RGB), then
+    // create the image:
+    Image i = new Image(device, data);
+
+相对路径：
+Image i = new Image(device, "icons/graphic.bmp");   //项目根目录下
+
+插件自带图像
+ISharedImages sharedImages = PlatformUI.getWorkbench().getSharedImages():
+Image image = sharedImages.getImage(ISharedImages.IMG_OBJS_WARN_TSK);
+
+ImageLoader类使用介绍：保存图片
+ImageLoader imageLoader = new ImageLoader();
+imageLoader.data = new ImageData[] {imageData};                 
+//The reason the data field is an array of ImageData is to support
+//image file formats with more than one frame such as animated GIFs or interlaced JPEG files.
+imageLoader.save("C:/temp/Idea_PureWhite.jpg",SWT.IMAGE_JPEG);
+
+Image使用代价昂贵，JFace包提供了一个轻量级的ImageDescriptor类.
+An image descriptor is an object that knows how to create an SWT image.It does not hold onto images or cache them, but rather just creates them on demand.
+ImageDescriptor类是抽象类，不能用new,有2种常用static方法，createFromFile,createFromURL.
+
+1：ImageDescriptor temp = ImageDescriptor.createFromFile(abc.class,"icons/temp.gif")
+   //在类abc目录下的icon目录下的图片temp.gif
+   //没有真正加载这个图像
+
+2：//绝对目录
+   URL url ＝ new URL("file:\\c:\\icons\\temp.gif");
+   ImageDescriptor temp = ImageDescriptor.createFromURL(url)
+   //项目主目录
+   URL url ＝ new URL("file:icons/temp.gif");
+   ImageDescriptor temp = ImageDescriptor.createFromURL(url)
+
+3: Eclipse自带图像调用
+   ImageDescriptor temp ＝ WorkbenchImages.getImageDescriptor(IWorkbenchGraphicConstants.IMG_ETOOL_HOME_NAV);
+
+4: 得到image
+   Image image = temp.creatImage();
+
+图像注册表ImageRegistry类：高速缓存图像和图像描述符
+  ImageRegistry image_registry ＝ new ImageRegistry();
+
+  URL url = new URL("file:icons/folder.gif");
+  ImageDescriptor imaged = ImageDescriptor.createFromURL(url);
+
+  image_registry.put("folder",imaged);
+ 
+  //取出image
+  Image image = image_registry.get("folder");
+  //取出描述符
+  ImageDescriptor imageDescriptor = image_registry.getDescriptor("folder");
+  //删除图像
+  image_registry.remove("folder");
+
+
+//绝对目录
+URL url=null;
+try {
+    url = new URL("file:icons/info.png");
+} catch (MalformedURLException e) {
+    e.printStackTrace();
+}
+ImageDescriptor imaged = ImageDescriptor.createFromURL(url);
+
+image_registry.put("folder",imaged);
+label.setImage(image_registry.get("folder"));

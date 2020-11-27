@@ -1,0 +1,48 @@
+conda remove -n test --all
+conda create -n test python=3.7.2
+  conda deactivate
+conda install scikit-learn
+conda install scikit-learn
+conda remove -n test --all
+conda create -n test python=3.7.2
+  conda deactivate
+conda install scikit-learn
+conda install scikit-learn
+
+# 第一步下载
+# miniconda安装
+# wget -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda2-4.5.11-Linux-x86_64.sh
+
+# 第二步安装
+bash Miniconda2-4.5.11-Linux-x86_64.sh  # uname -a
+# 按enter--三下空格--输入yes--按enter--输入yes
+source ~/.bashrc
+# 激活配置
+
+# 第三步：配置镜像
+# 配置镜像(安装一次，镜像也只配置一次，注意不要复制错误！！！)
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda
+conda config --set show_channel_urls yes
+# 执行完上述命令后，会生成~/.condarc
+
+# 第四步：创建小环境并安装软件
+# 创建名为rna的软件安装环境，同时安装python=2版本的软件
+conda create -n test python=3.7.2
+# 出现三个done
+
+# 查看当前conda环境
+# 可以看到成功建立的rna
+conda info --envs
+
+# 激活/进入conda的rna环境，避免安装软件时安装到大环境
+source activate test
+# 小环境创建成功，可以随便安装软件到小环境里啦
+
+# 尝试
+# 安装 sra-tools软件
+conda search sra-tools
+conda install -y sra-tools  # done正确安装，且能调出软件help
+......
+source deactivate # 退出当前环境

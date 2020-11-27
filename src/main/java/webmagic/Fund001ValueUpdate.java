@@ -9,7 +9,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.junit.Test;
-import util.DateUtil;
 import util.JDBCUtil;
 import util.UserAgentUtil;
 
@@ -62,7 +61,7 @@ public class Fund001ValueUpdate {
                 htmlList.add(str);
             }
             int start =0;
-            if(htmlList.size()==2){
+            if(htmlList.size()>=2){
                 start=1;
             }
             List<String> resultList = new ArrayList<>();
@@ -79,6 +78,8 @@ public class Fund001ValueUpdate {
                 System.out.println(sql);
                 resultList.add(sql);
             }
+//            System.out.println(Arrays.toString(resultList.toArray()));
+//            break;
             JDBCUtil.insertList(resultList);
         }
     }
