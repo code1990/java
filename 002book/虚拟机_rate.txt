@@ -1,0 +1,126 @@
+深入理解Java虚拟机（第2版）	9.0	1685	
+深入理解Java虚拟机	8.6	774	
+深入Java虚拟机(原书第2版)	8.7	577	
+虚拟机	8.4	75	
+深入理解Java虚拟机（第3版）	9.6	164	
+自己动手写Java虚拟机	8.2	88	
+实战Java虚拟机	8.2	78	
+Java虚拟机规范（Java SE 8版）	7.9	38	
+虚拟机设计与实现	0.0	7	
+Java虚拟机精讲	8.0	39	
+虚拟机	8.5	29	
+自己动手实现Lua	9.1	40	
+揭秘Java虚拟机	7.4	31	
+自己动手写Python虚拟机	0.0	1	
+虚拟机的设计与实现	7.3	43	
+Java虚拟机规范(Java SE 7版)	8.9	34	
+Scala程序设计	7.8	196	
+深入理解Android	9.3	21	
+企业级虚拟机应用实战	6.9	28	
+深入嵌入式Java虚拟机	7.8	10	
+解析Java虚拟机开发	2.6	35	
+Java虚拟机并发编程	7.1	53	
+NewBluePill	8.2	12	
+Android Dalvik虚拟机结构及机制剖析	0.0	7	
+Android Dalvik虚拟机结构及机制剖析	0.0	7	
+Vmware虚拟机实用宝典	0.0	1	
+深入解析Android虚拟机	0.0	3	
+Scala与Clojure函数式编程模式	7.2	22	
+虚拟机技术与应用	0.0	1	
+Java虚拟机规范	0.0	2	
+Java 虚拟机规范	0.0	1	
+虚拟机深入应用实践	0.0	3	
+虚拟机典型应用技巧	0.0	2	
+虚拟机全接触	0.0	0	
+中小企业虚拟机解决方案大全	0.0	7	
+虚拟机技术与动手实验	0.0	1	
+Java虚拟机规范	0.0	0	
+直達Java虛擬機器	0.0	1	
+实战多操作系统与虚拟机	0.0	2	
+虚拟机配置与应用完全手册(附光盘)	0.0	2	
+实战多操作系统与虚拟机	0.0	2	
+并行虚拟机与报文传送接口新进展Recent advances in parallel virtual machine and message passing interface	0.0	0	
+虚拟机排困解难DIY	0.0	0	
+走进机器人虚拟世界：萝卜圈虚拟机器人学习与探索	0.0	0	
+RHCSARHCE Red Hat Linux认证模拟考试解析与虚拟机(Exams EX200 &amp; EX300)	0.0	0	
+(赠品)Java虚拟机器	0.0	0	
+玩通VMware	0.0	0	
+深入解析Android虚拟机	0.0	2	
+Java虚拟机基础教程	0.0	4	
+全国青少年校外教育活动指导教程丛书：虚拟机器人探究活动	0.0	0	
+玩转虚拟机——基于VMware+Windows	0.0	0	
+玩转虚拟机器人	0.0	0	
+虚拟机器人设计与实践	0.0	0	
+实战Java虚拟机：JVM故障诊断与性能优化（第2版）	0.0	9	
+深入浅出：Java虚拟机设计与实现	0.0	1	
+自制编程语言	7.9	123	
+Java性能权威指南	8.0	124	
+The Garbage Collection Handbook	9.8	26	
+HotSpot实战	7.1	54	
+游戏脚本高级编程	7.7	64	
+汇编语言与计算机体系结构	9.4	15	
+Java Performance	8.8	64	
+虚拟化与云计算	7.1	181	
+Ruby Under a Microscope	9.3	33	
+Java深度历险	8.1	40	
+Oracle JRockit	8.6	16	
+Inside the Java 2 Virtual Machine	9.0	15	
+Virtual Machines	8.7	11	
+Core Java, Volume I (9th Edition)	8.5	70	
+Garbage Collection	0.0	6	
+Java Performance	9.2	29	
+The Java™ Virtual Machine Specification	7.9	25	
+Advanced Virtual Machine Design and Implementation	0.0	4	
+Writing Compilers and Interpreters	0.0	8	
+Xen虚拟化技术	6.3	30	
+Docker开发实践	7.5	28	
+Shared Source CLI Essentials	9.0	11	
+Programming Language Pragmatics	9.3	14	
+Cloud Native Java	7.9	11	
+Game Scripting Mastery (Premier Press Game Development (Paperback))	8.6	14	
+Virtual Machine Design and Implementation C/C++	0.0	5	
+云计算与OpenStack	6.5	18	
+The Java Virtual Machine Specification, Java SE 7 Edition	8.2	11	
+ガベージコレクションのアルゴリズムと実装	0.0	4	
+The School of Niklaus Wirth	0.0	2	
+计算机组成及汇编语言原理	0.0	3	
+计算机组成及汇编语言原理	7.2	14	
+Foundations of Programming Languages	0.0	1	
+Compiler Design	0.0	4	
+Writing High-Performance .NET Code	0.0	9	
+编译器构造	0.0	6	
+企业虚拟化实战-Vmware篇	6.6	15	
+Inside the Java Virtual Machine	0.0	7	
+Visual C++冒险游戏程序设计	7.5	11	
+形式语言与自动机	6.8	22	
+Java	0.0	7	
+Programming Language Processors in Java	0.0	4	
+Smalltalk-80	0.0	5	
+プログラミング言語を作る	0.0	2	
+JVM G1源码分析和调优	0.0	6	
+Virtual Machines	0.0	0	
+Pro DLR in .NET 4	0.0	4	
+Understanding Java Virtual Machine	0.0	0	
+Pro JavaScript Performance	0.0	6	
+OpenJDK cookbook	0.0	0	
+编译原理（第3版）	0.0	7	
+Rubyソースコード完全解説	0.0	4	
+疯狂VirtualBox实战讲学录	0.0	2	
+Game Engine Design and Implementation	0.0	0	
+.NET Common Language Runtime Unleashed	0.0	1	
+Virtual Machines	0.0	0	
+Pro (IBM) WebSphere Application Server 7 Internals	0.0	1	
+Distributed Virtual Machines	0.0	0	
+The Java Virtual Machine Specification	0.0	1	
+VMware Workstation与ESX Server典型应用指南	0.0	3	
+2nd Java Virtual Machine Reasearch and Technology Symposium (JVM '02)	0.0	0	
+Under the Hood of .NET Memory Management	0.0	1	
+Kaffe Real-Time JVM	0.0	0	
+Enterprise Java Applications Architecture on VMware	0.0	0	
+スクリプトエンジン プログラミング	0.0	1	
+やさしいインタープリタの作り方入門	0.0	2	
+明快入門コンパイラ・インタプリタ開発 C処理系を作りながら学ぶ (林晴比古実用マスターシリーズ)	0.0	1	
+実践DLR .NET活用テクニック入門	0.0	0	
+.NET Development Using the Compiler API	0.0	0	
+Interpretation and Instruction Path Coprocessing	0.0	0	
+VMware虚拟化与云计算应用案例详解	0.0	2	
