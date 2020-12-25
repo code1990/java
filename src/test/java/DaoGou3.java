@@ -1,16 +1,10 @@
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.junit.Test;
-import util.HttpUtil;
-import util.JDBCUtil;
-import util.MathUtil;
-import util.TxtUtil;
+import util.*;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author 911
@@ -32,7 +26,29 @@ public class DaoGou3 {
      * http://api.fund.eastmoney.com/f10/lsjz?callback=jQuery18305662557800736644_1603875504293&fundCode=002190&pageIndex=1&pageSize=20&startDate=&endDate=&_=1603875504303
      */
 
+    /**
+     * 深圳大盘所有指数 23页
+     * http://46.push2.eastmoney.com/api/qt/clist/get?cb=jQuery112400006077467768177414_1606816183152&pn=7&pz=20&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m:0+t:5&fields=f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f12,f13,f14,f15,f16,f17,f18,f20,f21,f23,f24,f25,f26,f22,f33,f11,f62,f128,f136,f115,f152&_=1606816183168
+     */
 
+    /**
+     *上证大盘所有指数 11页
+     * http://63.push2.eastmoney.com/api/qt/clist/get?cb=jQuery112407832804967399252_1606816495537&pn=1&pz=20&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m:0+t:5&fields=f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f12,f13,f14,f15,f16,f17,f18,f20,f21,f23,f24,f25,f26,f22,f33,f11,f62,f128,f136,f115,f152&_=1606816495538
+     */
+
+    /**
+     * http://www.csindex.com.cn/zh-CN/indices/index-detail/399983
+     * 指数具体的成分详情
+     */
+
+    /**
+     * 反向查找基金的属性 对基金定位
+     */
+
+    /**
+     *
+     * 指数的最低点抄底 买入对应的基金
+     */
     @Test
     public void getInfo111() {
         String path = "D:\\gitee\\work\\123";
@@ -138,5 +154,23 @@ public class DaoGou3 {
             Elements elements = document.getElementsByClass("txt_in").get(0).getElementsByClass("info w790").get(0).getElementsByTag("tr");
             System.out.println(code+"\t"+elements.get(elements.size()-1).text().replaceAll(" ","\t"));
         }
+    }
+
+    @Test
+    public void getInfo1111(){
+        ConnectionPool pool = new ConnectionPool("stock");
+        String sql ="select ts_code from index_basic where market in ('CSI','SZSE');";
+        List<String> list = JDBCUtil.getList(pool,sql);
+        Map<String,Integer> map =new HashMap<>();
+        for (int i = 0; i <list.size() ; i++) {
+            String code = list.get(i).split("\\.")[0];
+            if(map.get(code)==null){
+                map.put(code,1);
+            }else {
+                map.put(code,map.get(code)+1);
+                System.out.println(code);
+            }
+        }
+//        MapUtil.printMap(map);
     }
 }

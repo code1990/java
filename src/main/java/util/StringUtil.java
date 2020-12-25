@@ -17,4 +17,11 @@ public class StringUtil {
         }
         return null;
     }
+
+    public static String convert(String value) {
+        if (value.contains("%")) {
+            value = value.replace("%", "");
+        }
+        return value;
+    }
 }
