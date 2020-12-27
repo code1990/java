@@ -45,6 +45,21 @@ public class ConnectionPool implements DataSource {
             }
         }
     }
+    public ConnectionPool(String db,int num) {
+        //一次性创建10个连接
+        if(num<0){
+            num=1;
+        }
+        for (int i = 0; i < num; i++) {
+            try {
+                Connection conn = JDBCUtil.getConnection(db);
+                // 将连接加入连接池中
+                pool.add(conn);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
     @Override
     public Connection getConnection() throws SQLException {

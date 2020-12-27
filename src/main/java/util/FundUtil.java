@@ -4,13 +4,12 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.junit.Test;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author 911
@@ -33,23 +32,26 @@ public class FundUtil {
         List<String> resultList = new ArrayList<>();
         for (int i = 0; i < jsonArray.size(); i++) {
             String info = jsonArray.getString(i);
-            if (info.contains("债") || info.contains("货币") || info.contains("年") || info.contains("月") || info.contains("理财型")) {
-                continue;
-            }
-            if (info.contains("分级杠杆") || info.contains("固定收益") || info.contains("后端") || info.contains("场内") || info.contains("其他创新")) {
-                continue;
-            }
-            if (info.contains("FOF") || info.contains("QDII-ETF") || info.contains("QDII-指数") || info.contains("油") || info.contains("QDII")) {
-                continue;
-            }
+//            if (info.contains("债") || info.contains("货币") || info.contains("年") || info.contains("月") || info.contains("理财型")) {
+//                continue;
+//            }
+//            if (info.contains("分级杠杆") || info.contains("固定收益") || info.contains("后端") || info.contains("场内") || info.contains("其他创新")) {
+//                continue;
+//            }
+//            if (info.contains("FOF") || info.contains("QDII-ETF") || info.contains("QDII-指数") || info.contains("油") || info.contains("QDII")) {
+//                continue;
+//            }
             JSONArray array = (JSONArray) jsonArray.get(i);
-            System.out.println(array.toJSONString());
-            String sql = "INSERT INTO t_fund_pool9 (fund_code,fund_name, fund_type) VALUES ('" + array.getString(0) + "', '" + array.getString(2) + "', '" + array.get(3) + "');";
+//            System.out.println(array.toJSONString());
+            String sql = "INSERT INTO t_fund_pool_all (fund_code,fund_name, fund_type) VALUES ('" + array.getString(0) + "', '" + array.getString(2) + "', '" + array.get(3) + "');";
+            System.out.println(sql);
             resultList.add(sql);
         }
         JDBCUtil.insertList(JDBCUtil.getConnection("stock"), resultList);
 //        SQLiteUtil.executeSql(SQLiteUtil.getConnection("D:\\github\\java\\stock.db"),resultList);
     }
+
+
 
     @Test
     public void delFundAC() {
@@ -220,29 +222,33 @@ public class FundUtil {
      */
     @Test
     public void checkInfo() {
-        String sql = "select fund_code from t_fund_pool9";
-        ConnectionPool pool = new ConnectionPool("stock");
+        String sql = "select fund_code from t_fund_pool_100";
+        ConnectionPool pool = new ConnectionPool("stock",10);
         List<String> list = JDBCUtil.getList(pool, sql);
         List<String> list3 = new ArrayList<>();
         for (int j = 0; j < list.size(); j++) {
             String code = list.get(j);
             String url = "http://fund.eastmoney.com/" + code + ".html";
+//            System.out.println(url);
             Document document = HttpUtil.getHtml(url);
             Elements elements = document.getElementsByClass("ui-table-hover").get(0).getElementsByTag("tr");
 
             System.out.println(j + "\t" + url);
+            //持仓明细 不明晰 或者基金终止 不在分析的范围之内
             boolean f = document.getElementsByClass("fundInfoItem").text().contains("基金已终止");
-            if (elements.size() != 11 || f) {
+            if (document.getElementsByClass("ui-table-hover").get(0).getElementsByTag("tr").size() != 11 || f) {
                 System.out.println(f);
+                System.out.println(url);
 //                System.out.println(elements.size());
 //                System.out.println(elements.text());
-                String sql2 = "delete from t_fund_pool9 where fund_code='" + code + "';";
-                String sql3 = "delete from t_fund_mx where fund_code='" + code + "';";
+                String sql2 = "delete from t_fund_pool_100 where fund_code='" + code + "';";
+                System.out.println(sql2);
+//                String sql3 = "delete from t_fund_mx where fund_code='" + code + "';";
                 list3.add(sql2);
-                list3.add(sql3);
+//                list3.add(sql3);
             }
         }
-        JDBCUtil.update(pool, list3);
+//        JDBCUtil.update(pool, list3);
     }
 
     /**
@@ -258,9 +264,19 @@ public class FundUtil {
         List<String> list3 = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
             String code = list.get(i);
-            String url = "http://fund.eastmoney.com/" + code + ".html?spm=aladin";
+            String url = "http://fund.eastmoney.com/" + code + ".html";
             System.out.println(i + "\t" + url);
             Document document = HttpUtil.getHtml(url);
+            boolean f = document.getElementsByClass("fundInfoItem").text().contains("终止");
+            //没有十大持仓信息 或者基金终止 直接删除
+            if ( f) {
+                System.out.println(f);
+                String sql2 = "delete from t_fund_pool9 where fund_code='" + code + "';";
+                String sql3 = "delete from t_fund_mx where fund_code='" + code + "';";
+                list3.add(sql2);
+                list3.add(sql3);
+                continue;
+            }
             Elements elements = document.getElementsByClass("dataOfFund").get(0).getElementsByClass("ui-font-middle");
             String v1 = convert(elements.get(2).text());
             if (v1.equals("--")) {
@@ -431,15 +447,15 @@ public class FundUtil {
         }
         ConnectionPool pool = new ConnectionPool("stock");
         String sql2 = "select fund_code from t_fund_pool9 order by fund_code;";
-        List<String> codeList = JDBCUtil.getList(pool,sql2);
-        for (int k = 1367; k <codeList.size() ; k++) {
+        List<String> codeList = JDBCUtil.getList(pool, sql2);
+        for (int k = 1367; k < codeList.size(); k++) {
             code = codeList.get(k);
 
             List<String> resultList = new ArrayList<>();
             for (int i = 0; i < urlList.size(); i++) {
                 String url = urlList.get(i);
-                url = url.replace("000001",code);
-                System.out.println(code+"\t"+url);
+                url = url.replace("000001", code);
+                System.out.println(code + "\t" + url);
                 Document document = HttpUtil.getHtml(url);
 
                 Elements elements = document.getElementsByClass("w782").get(0).getElementsByTag("tr");
@@ -456,7 +472,7 @@ public class FundUtil {
                     String str = htmlList.get(kkk);
                     String[] array = str.split(" ");
                     String percent = "0.0";
-                    if(array.length==1){
+                    if (array.length == 1) {
                         continue;
                     }
                     if (array.length == 5 && array[2].contains("%")) {
@@ -469,26 +485,26 @@ public class FundUtil {
                     resultList.add(sql2);
                 }
             }
-            for (int i = 0; i <resultList.size() ; i++) {
+            for (int i = 0; i < resultList.size(); i++) {
                 System.out.println(resultList.get(i));
             }
 //            break;
-          JDBCUtil.insertList(pool,resultList);
+            JDBCUtil.insertList(pool, resultList);
 
         }
     }
 
     @Test
-    public void updateIndexInfo(){
+    public void updateIndexInfo() {
         //使用网易的不复权的历史数据
         //东财 复权2020-11-20 之前使用东财
         //每日更新使用 网易
         //http://quotes.money.163.com/trade/lsjysj_zhishu_000001.html
-        String url ="http://quotes.money.163.com/trade/lsjysj_zhishu_000001.html";
+        String url = "http://quotes.money.163.com/trade/lsjysj_zhishu_000001.html";
         Document document = HttpUtil.getHtml(url);
         Elements elements = document.getElementsByClass("table_bg001 border_box limit_sale").get(0).getElementsByTag("tr");
         //日期 开盘价 最高价 最低价 收盘价 涨跌额 涨跌幅(%) 成交量(股) 成交金额(元)
-        for (int i = 1; i <elements.size() ; i++) {
+        for (int i = 1; i < elements.size(); i++) {
             System.out.println(elements.get(i).text());
         }
     }
@@ -521,4 +537,158 @@ public class FundUtil {
 //            ⑥多头市场的暴涨与空头市场的暴跌，会使乖离达到意想不到的百分比，但出现次数极少，时间也短，可视为一特例。
 //            ⑦在大势上升市场如遇负乖离，可以持回跌价买进，因为进场危险性小。
 //            ⑧在大势下跌的走势中如遇正乖离，可以持回升高价出售。
+
+
+    @Test
+    public void getInfo111111() {
+        String keyArray ="五粮液、中炬高新、邮储银行、中国太保、保利地产、云海金属、玲珑轮胎、中国汽研、上海沪工、晨光文具、中兴通讯、拓邦股份";
+        String sql = "select fund_code from t_fund_pool9";
+        ConnectionPool pool = new ConnectionPool("stock");
+        List<String> list = JDBCUtil.getList(pool, sql);
+
+        for (int i = 0; i < list.size(); i++) {
+            String code = list.get(i);
+            String url = "http://fund.eastmoney.com/" + code + ".html";
+
+            Document document = HttpUtil.getHtml(url);
+            Elements elements = document.getElementsByClass("ui-table-hover").get(0).getElementsByTag("tr");
+            int count =0;
+            for (int j = 1; j <elements.size() ; j++) {
+                String info = elements.get(j).getElementsByTag("a").get(0).text().replace(" ","");
+                if(keyArray.contains(info)){
+                    count++;
+                }
+            }
+            System.out.println(i + "\t" + code+"\t"+count);
+        }
+    }
+
+    @Test
+    public void sortInfo(){
+        String[] array = {"v_1","v_3","v_6","v_y_1","v_y_3"};
+        ConnectionPool pool = new ConnectionPool("stock",1000);
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < array.length; i++) {
+            String column = array[i];
+            //等值排名
+            String sql1 ="select fund_code,"+column+", ifnull((select count(*) from t_fund_sort_100 where "+column+">t."+column+"),0)+1 as info\n" +
+                    "from t_fund_sort_100 t order by "+column+" desc;";
+            List<String[]> list = JDBCUtil.getResultList(pool,sql1);
+            List<String> resultList = new ArrayList<>();
+            for (int j = 0; j <list.size() ; j++) {
+                String code =list.get(j)[0];
+                String info = list.get(j)[2];
+                String sql3 = "update t_fund_sort_100 set "+column+" ="+info+" where fund_code ='"+code+"';";
+                System.out.println(sql3);
+                resultList.add(sql3);
+            }
+            JDBCUtil.update(pool, resultList);
+            if(i==array.length-1){
+                sb.append(column+"");
+            }else {
+                sb.append(column+"+");
+            }
+
+        }
+        String sql = "select fund_code,"+sb.toString()+" as number from t_fund_sort_100 order by number;";
+        List<String[]> list = JDBCUtil.getResultList(pool,sql);
+        List<String> resultList = new ArrayList<>();
+        for (int j = 0; j <list.size() ; j++) {
+            String code =list.get(j)[0];
+            String number = list.get(j)[1];
+            String sql3 = "update t_fund_sort_100 set number ="+number+" where fund_code ='"+code+"';";
+            System.out.println(code+"\t"+number);
+            resultList.add(sql3);
+        }
+        JDBCUtil.update(pool, resultList);
+    }
+
+
+    @Test
+    public void getInfo1231() throws Exception {
+        String sql = "select  fund_code from t_fund_pool_100 where fund_code not in (\n" +
+                "select  fund_code from t_fund_stock_100 \n" +
+                ");";
+        ConnectionPool pool = new ConnectionPool("stock",100);
+        List<String> codeList = JDBCUtil.getList(pool,sql);
+//        List<String> resultList = new ArrayList<>();
+        for (int k = 0; k < codeList.size(); k++) {
+            String code = codeList.get(k);
+            String url = "http://fund.eastmoney.com/" + code + ".html";
+            System.out.println(k + ">>>>>>>" + code);
+            Document document = HttpUtil.getHtml(url);
+            Elements elements = document.getElementsByClass("ui-table-hover").get(0).getElementsByTag("tr");
+            String vm = document.getElementsByClass("infoOfFund").get(0).getElementsByTag("td").get(1).text().split("：")[1];
+            if (vm.contains("亿元")) {
+                vm = vm.split("亿元")[0];
+            } else {
+                vm = "0.0";
+            }
+            if (vm.trim().equals("--")){
+                vm = "0.0";
+            }
+            List<String> list = new ArrayList<>();
+            for (int j = 1; j < elements.size(); j++) {
+                String str = elements.get(j).text();
+                Element elementTd = elements.get(j).getElementsByTag("td").get(0);
+                if (str.contains("暂无数据") || !elementTd.toString().contains("href")) {
+                    continue;
+                }
+                String href =elementTd.getElementsByTag("a").get(0).attr("href");
+                String comInfo = href.replace("http://quote.eastmoney.com/","");
+                comInfo = comInfo.replace(".html","");
+                comInfo = comInfo.replace("sh","");
+                comInfo = comInfo.replace("sz","");
+                if(comInfo.contains("hk")){
+                    comInfo = comInfo.replace("hk/","");
+                    comInfo = comInfo+".HK";
+                }else if(comInfo.contains("us")){
+                    comInfo = comInfo.replace("us/","");
+                }
+                String v = elements.get(j).getElementsByTag("td").get(1).text().replace("%","");
+//                System.out.println(code+"\t"+comInfo+"\t"+v);
+                String sql6 ="INSERT INTO t_fund_stock_100 (fund_code, fund_money, com_code, com_percent) VALUES ('"+code+"', "+vm+", '"+comInfo+"', "+v+");";
+                System.out.println(sql6);
+//                list.add(sql6);
+            }
+//            break;
+//            JDBCUtil.insertList(pool,list);
+        }
+
+    }
+
+    @Test
+    public void getInfo11110(){
+        String sql ="select distinct com_code from t_fund_stock_100 ;";
+        ConnectionPool pool = new ConnectionPool("stock",10);
+        List<String> codeList = JDBCUtil.getList(pool,sql);
+        StringBuilder sb = new StringBuilder();
+        for (int k = 0; k < codeList.size(); k++) {
+            String sql2 ="select sum(fund_money*com_percent)/100 as num from t_fund_stock_100 where com_code ='"+codeList.get(k)+"' ;";
+            List<String> list2 = JDBCUtil.getList(pool,sql2);
+            System.out.println(codeList.get(k)+"\t"+list2.get(0));
+            sb.append(codeList.get(k)+"\t"+list2.get(0)+"\n");
+        }
+        TxtUtil.writeTxt("C:\\Users\\xiala\\Desktop\\123.txt",sb.toString());
+    }
+
+    @Test
+    public void getInfo0009(){
+        String path ="C:\\Users\\xiala\\Desktop\\123.txt";
+        List<String> list = TxtUtil.readTxt(path);
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < list.size(); i++) {
+            String code = list.get(i).split("\t")[0];
+
+//            String url ="http://guba.eastmoney.com/list,"+code+".html?from=BaiduAladdin";
+//            Document document = HttpUtil.getHtml(url);
+//            System.out.println(code);
+//            String name = document.getElementById("hqprice").text();
+//            String info = document.getElementsByClass("company_details").get(0).getElementsByTag("dd").get(1).attr("title");
+            sb.append("33#"+code+"\n");
+//            System.out.println(sb.toString());
+        }
+        TxtUtil.writeTxt("C:\\Users\\xiala\\Desktop\\1234.EBK",sb.toString());
+
+    }
 }

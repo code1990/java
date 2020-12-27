@@ -186,11 +186,11 @@ ALTER TABLE t_fund_mx ADD COLUMN `zs_code` varchar(100) DEFAULT NULL;
 ALTER TABLE t_fund_mx ADD COLUMN `zs_name` varchar(100) DEFAULT NULL;
 ALTER TABLE t_fund_mx ADD COLUMN `zs_mx` varchar(100) DEFAULT NULL;
 ALTER TABLE t_fund_mx ADD COLUMN `zs_bd` varchar(100) DEFAULT NULL;
-ALTER TABLE t_fund_mx ADD COLUMN `v_1` varchar(100) DEFAULT NULL;
-ALTER TABLE t_fund_mx ADD COLUMN `v_3` varchar(100) DEFAULT NULL;
-ALTER TABLE t_fund_mx ADD COLUMN `v_6` varchar(100) DEFAULT NULL;
-ALTER TABLE t_fund_mx ADD COLUMN `v_y` varchar(100) DEFAULT NULL;
-ALTER TABLE t_fund_mx ADD COLUMN `v_p` varchar(100) DEFAULT NULL;
+ALTER TABLE t_fund_mx ADD COLUMN `v_1` decimal(10,2) not null default '0.0';
+ALTER TABLE t_fund_mx ADD COLUMN `v_3` decimal(10,2) not null default '0.0';
+ALTER TABLE t_fund_mx ADD COLUMN `v_6` decimal(10,2) not null default '0.0';
+ALTER TABLE t_fund_mx ADD COLUMN `v_y` decimal(10,2) not null default '0.0';
+ALTER TABLE t_fund_mx ADD COLUMN `v_p` decimal(10,2) not null default '0.0';
 
 
 ALTER TABLE t_fund_mx ADD COLUMN `v_m` varchar(100) DEFAULT NULL;
@@ -198,7 +198,7 @@ ALTER TABLE t_fund_mx ADD COLUMN `v_j` varchar(100) DEFAULT NULL;
 ALTER TABLE t_fund_mx ADD COLUMN `v_d` varchar(100) DEFAULT NULL;
 ALTER TABLE t_fund_mx ADD COLUMN `v_s` varchar(100) DEFAULT NULL;
 ALTER TABLE t_fund_mx ADD COLUMN `v_price` decimal(10,2) not null default '0.0';
-
+alter table t_book modify name varchar(22);
 alter table news  modify column title varchar(130);
 
 ALTER TABLE t_fund_mx MODIFY v_y decimal(10,2) not null default '0.0';
@@ -292,4 +292,6 @@ PRIMARY KEY (id)
 其中N，一般5、6、10、12、24、30和72
 
  MA = (C1+C2+C3+C4+C5+....+Cn)/n C 为收盘价，n 为移动平均周期数
-
+----等值排名
+select v_1, ifnull((select count(*) from t_fund_sort_100 where v_1>t.v_1),0)+1 as info
+from t_fund_sort_100 t order by v_1 desc;
