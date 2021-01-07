@@ -2,6 +2,7 @@ package util;
 
 import org.junit.Test;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -209,7 +210,7 @@ public class DateUtil {
 
     public static String get20Date() {
         Calendar calendar = Calendar.getInstance();
-        int count =0;
+        int count = 0;
         String startDate = "";
         String endDate = "";
         for (int i = 1; i <= 50; i++) {
@@ -223,14 +224,88 @@ public class DateUtil {
                 continue;
             }
             count++;
-            if(count==1){
-                endDate=format.format(date);
+            if (count == 1) {
+                endDate = format.format(date);
             }
-            if(count==20){
-                startDate=format.format(date);
+            if (count == 20) {
+                startDate = format.format(date);
                 break;
             }
         }
-        return startDate+"\t"+endDate;
+        return startDate + "\t" + endDate;
+    }
+
+    public static Date[] getWeekDay() {
+
+        Calendar calendar = Calendar.getInstance();
+
+        while (calendar.get(Calendar.DAY_OF_WEEK) != Calendar.MONDAY) {
+
+            calendar.add(Calendar.DAY_OF_WEEK, -1);
+
+        }
+
+        Date[] dates = new Date[5];
+
+        for (int i = 0; i < 5; i++) {
+
+            dates[i] = calendar.getTime();
+
+            calendar.add(Calendar.DATE, 1);
+
+        }
+
+        return dates;
+
+    }
+
+
+
+    @Test
+    public void main100() throws Exception {
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd E");
+
+        for (Date date : getWeekDay()) {
+
+            System.out.println(dateFormat.format(date));
+
+        }
+
+        DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String Date = "2020-08-03";  //定义初始是周一
+        Date testdate = sdf.parse(Date);
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(testdate);
+        if(cal.get(Calendar.DAY_OF_WEEK)==Calendar.MONDAY){
+            System.out.println(sdf.format(cal.getTime())+"========="+"是周一=========");
+        }
+        //日期加一天
+        cal.add(Calendar.DATE,1);
+        if(cal.get(Calendar.DAY_OF_WEEK)==Calendar.TUESDAY) {
+            System.out.println(sdf.format(cal.getTime())+"========="+"是周二=========");
+        }
+        cal.add(Calendar.DATE,1);
+        if(cal.get(Calendar.DAY_OF_WEEK)==Calendar.WEDNESDAY){
+            System.out.println(sdf.format(cal.getTime())+"========="+"是周三=========");
+        }
+        cal.add(Calendar.DATE,1);
+        if(cal.get(Calendar.DAY_OF_WEEK)==Calendar.THURSDAY){
+            System.out.println(sdf.format(cal.getTime())+"========="+"是周四=========");
+        }
+        cal.add(Calendar.DATE,1);
+        if(cal.get(Calendar.DAY_OF_WEEK)==Calendar.FRIDAY){
+            System.out.println(sdf.format(cal.getTime())+"========="+"是周五=========");
+        }
+        cal.add(Calendar.DATE,1);
+        if(cal.get(Calendar.DAY_OF_WEEK)==Calendar.SATURDAY){
+            System.out.println(sdf.format(cal.getTime())+"========="+"是周六=========");
+        }
+        cal.add(Calendar.DATE,1);
+        if(cal.get(Calendar.DAY_OF_WEEK)==Calendar.SUNDAY){
+            System.out.println(sdf.format(cal.getTime())+"========="+"是周日=========");
+        }
+
+
     }
 }

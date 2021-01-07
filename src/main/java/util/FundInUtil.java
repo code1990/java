@@ -158,9 +158,9 @@ public class FundInUtil {
             String sql2 = "update t_fund_mx_100 set v_1=" + v1 + ",v_3=" + v3 + ", v_6 = " + v6 + ", v_y_1 = " + vy + ",v_y_3="+vy3+", v_percent = " + vp + ",v_price=" + vprice + " where fund_code ='" + code + "';";
             System.out.println(sql2);
 //            break;
-//            list3.add(sql2);
+            list3.add(sql2);
         }
-//        JDBCUtil.update(pool, list3);
+        JDBCUtil.update(pool, list3);
     }
 
 }

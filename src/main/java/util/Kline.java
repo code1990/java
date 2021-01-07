@@ -10,8 +10,33 @@ public class Kline {
     private Double low;
     private Double open;
     private Double close;
+    private Double percent;
+
+    public Double getMid() {
+        if (percent>=0){
+            return this.open+(this.close-this.open)/2;
+        }else {
+            return this.close+(this.open-this.close)/2;
+        }
+
+    }
+    public Double getPercent() {
+        return percent;
+    }
+
+    public void setPercent(Double percent) {
+        this.percent = percent;
+    }
 
     public Kline() {
+    }
+
+    public Kline(Double high, Double low, Double open, Double close, Double percent) {
+        this.high = high;
+        this.low = low;
+        this.open = open;
+        this.close = close;
+        this.percent = percent;
     }
 
     public Kline(Double open, Double high, Double low, Double close) {
@@ -104,6 +129,7 @@ public class Kline {
                 ", high=" + high +
                 ", low=" + low +
                 ", close=" + close +
+                ", percent=" + percent +
                 '}';
     }
 

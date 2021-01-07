@@ -11,6 +11,15 @@ import java.util.*;
  */
 public class TxtUtil {
 
+    public static List<String> readDirTxt(String filePath){
+        File[] files = new File(filePath).listFiles();
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i <files.length ; i++) {
+            list.addAll(readTxt(files[i]));
+        }
+        return list;
+    }
+
     public static String readTxtStr(String filePath) {
         StringBuilder sb = new StringBuilder();
         List<String> list = readTxt(filePath);
